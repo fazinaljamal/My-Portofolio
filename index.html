@@ -41,6 +41,10 @@
         --gradient-icon: linear-gradient(135deg, var(--primary-lightest) 0%, var(--primary-lighter) 100%);
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: 'Inter', sans-serif;
         background-color: var(--neutral-50);
@@ -429,226 +433,6 @@
         background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
 
-      /* Style untuk halaman detail proyek */
-      .page-section {
-        display: none;
-        min-height: 100vh;
-        padding-top: 80px;
-      }
-
-      .page-section.active {
-        display: block;
-      }
-
-      .project-detail {
-        background-color: #ffffff;
-        color: #1e293b;
-      }
-
-      .project-detail .back-button {
-        background-color: #fbbf24;
-        color: #000;
-        padding: 8px 16px;
-        border-radius: 8px;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 24px;
-        transition: all 0.3s ease;
-      }
-
-      .project-detail .back-button:hover {
-        background-color: #f59e0b;
-        transform: translateY(-2px);
-      }
-
-      .project-detail .project-header {
-        margin-bottom: 32px;
-      }
-
-      .project-detail .project-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 16px;
-        color: #1e293b;
-      }
-
-      .project-detail .project-description {
-        background-color: rgba(59, 130, 246, 0.05);
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 32px;
-        border: 1px solid rgba(59, 130, 246, 0.1);
-      }
-
-      .project-detail .project-technologies {
-        margin-bottom: 32px;
-      }
-
-      .project-detail .tech-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 16px;
-      }
-
-      .project-detail .tech-item {
-        background-color: rgba(59, 130, 246, 0.1);
-        border-radius: 8px;
-        padding: 8px 16px;
-        color: #1e293b;
-        font-weight: 500;
-      }
-
-      .project-detail .project-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-        margin-bottom: 32px;
-      }
-
-      .project-detail .gallery-item {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
-
-      .project-detail .gallery-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      .project-detail .project-videos {
-        margin-bottom: 32px;
-      }
-
-      .project-detail .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-      }
-
-      .project-detail .video-item {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
-
-      .project-detail .video-thumbnail {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-      }
-
-      .project-detail .video-thumbnail img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .project-detail .video-play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 64px;
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-      }
-
-      .project-detail .video-info {
-        padding: 16px;
-        background-color: rgba(59, 130, 246, 0.05);
-        border: 1px solid rgba(59, 130, 246, 0.1);
-      }
-
-      .project-detail .video-title {
-        font-size: 1.125rem;
-        font-weight: 600;
-        margin-bottom: 8px;
-        color: #1e293b;
-      }
-
-      .project-detail .video-description {
-        color: #475569;
-        font-size: 0.875rem;
-      }
-
-      .project-detail .project-footer {
-        text-align: center;
-        padding: 24px 0;
-        border-top: 1px solid rgba(59, 130, 246, 0.1);
-        margin-top: 32px;
-      }
-
-      .project-detail .contact-info {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin-top: 16px;
-      }
-
-      .project-detail .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #475569;
-      }
-
-      /* Style untuk halaman detail proyek (dark theme) */
-      .project-detail-dark {
-        background-color: #0f172a;
-        color: #f1f5f9;
-      }
-
-      .project-detail-dark .project-title {
-        color: #fff;
-      }
-
-      .project-detail-dark .project-description {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .project-detail-dark .tech-item {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-      }
-
-      .project-detail-dark .video-info {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .project-detail-dark .video-title {
-        color: #fff;
-      }
-
-      .project-detail-dark .video-description {
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      .project-detail-dark .project-footer {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .project-detail-dark .contact-item {
-        color: rgba(255, 255, 255, 0.8);
-      }
-
       /* Perbaikan untuk bagian desain - Memastikan foto tampil tinggi (poster) dan responsif */
       .design-project-card {
         position: relative;
@@ -762,588 +546,594 @@
       </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="page-section active">
-      <!-- Hero Section -->
-      <section class="min-h-screen flex items-center pt-20 hero-gradient">
-        <div class="container mx-auto px-6">
-          <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 mb-10 md:mb-0 fade-in-up">
-              <h2 class="text-lg text-neutral-600 font-semibold mb-2">Halo, Saya</h2>
-              <h1 class="text-5xl md:text-7xl font-bold text-neutral-900 mb-4 font-display">
-                <span id="nameTyping" class="name-gradient"></span>
-              </h1>
-              <div class="text-2xl md:text-3xl text-neutral-600 mb-6">
-                <span id="roleTyping" class="typing-effect"></span>
-              </div>
-              <p class="text-neutral-700 mb-8 leading-relaxed">
-                Saya adalah seorang santri yang passionate dalam belajar pemrograman web. Saya memulai perjalanan saya sebagai santri di Ma'had Darul Fatah dan sekarang melanjutkan pendidikan serta menekuni pemrograman di Ma'had HSI. Dengan
-                kombinasi antara pendidikan agama dan teknologi, saya berharap dapat menciptakan solusi digital yang bermanfaat.
-              </p>
-              <div class="flex flex-wrap gap-4">
-                <a href="#contact" class="px-8 py-3 btn-primary text-white rounded-full"> Hubungi Saya </a>
-                <a href="index.html#portfolio-main" class="px-8 py-3 btn-secondary rounded-full"> Lihat Portofolio </a>
-              </div>
-              <div class="flex space-x-4 mt-8">
-                <a href="https://github.com/" class="text-neutral-600 hover:text-neutral-900 transition-colors">
-                  <i class="fab fa-github text-2xl"></i>
-                </a>
-                <a href="https://www.instagram.com/accounts/onetap/?next=%2F" class="text-neutral-600 hover:text-neutral-900 transition-colors">
-                  <i class="fab fa-instagram text-2xl"></i>
-                </a>
-              </div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 hero-gradient">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 mb-10 md:mb-0 fade-in-up">
+            <h2 class="text-lg text-neutral-600 font-semibold mb-2">Halo, Saya</h2>
+            <h1 class="text-5xl md:text-7xl font-bold text-neutral-900 mb-4 font-display">
+              <span id="nameTyping" class="name-gradient"></span>
+            </h1>
+            <div class="text-2xl md:text-3xl text-neutral-600 mb-6">
+              <span id="roleTyping" class="typing-effect"></span>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-              <div class="relative">
-                <div class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-primary/20 to-primary-light/20 absolute -top-10 -right-10 float-animation"></div>
-                <img src="assets/photo_2025-12-19_08-48-18.jpg" alt="Profile" class="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-4 border-white/20" />
-              </div>
+            <p class="text-neutral-700 mb-8 leading-relaxed">
+              Saya adalah seorang santri yang passionate dalam belajar pemrograman web. Saya memulai perjalanan saya sebagai santri di Ma'had Darul Fatah dan sekarang melanjutkan pendidikan serta menekuni pemrograman di Ma'had HSI. Dengan
+              kombinasi antara pendidikan agama dan teknologi, saya berharap dapat menciptakan solusi digital yang bermanfaat.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="px-8 py-3 btn-primary text-white rounded-full"> Hubungi Saya </a>
+              <a href="#portfolio-main" class="px-8 py-3 btn-secondary rounded-full"> Lihat Portofolio </a>
+            </div>
+            <div class="flex space-x-4 mt-8">
+              <a href="https://github.com/" class="text-neutral-600 hover:text-neutral-900 transition-colors">
+                <i class="fab fa-github text-2xl"></i>
+              </a>
+              <a href="https://www.instagram.com/accounts/onetap/?next=%2F" class="text-neutral-600 hover:text-neutral-900 transition-colors">
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Tentang <span class="gradient-text">Saya</span></h2>
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="fade-in-up">
-              <img src="assets/photo_2025-12-19_08-48-17.jpg" alt="About" class="rounded-xl shadow-xl w-full" />
-            </div>
-            <div class="fade-in-up">
-              <h3 class="text-2xl font-semibold mb-4">Santri & Web Developer</h3>
-              <p class="text-neutral-600 mb-6 leading-relaxed">
-                Saya adalah seorang santri yang telah menyelesaikan hafalan 30 juz di Ma'had Darul Fatah Pangkal Pinang, Bangka Belitung. Saat ini, saya sedang melanjutkan perjalanan pendidikan saya di Ma'had HSI sambil mendalami dunia
-                pemrograman web. Saya percaya bahwa kombinasi antara ilmu agama dan teknologi dapat menciptakan solusi yang inovatif dan bermanfaat bagi masyarakat.
-              </p>
-              <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="flex items-center space-x-2">
-                  <i class="fas fa-check-circle text-primary"></i>
-                  <span class="text-neutral-700">Hafidz 30 Juz</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <i class="fas fa-check-circle text-primary"></i>
-                  <span class="text-neutral-700">Problem Solver</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <i class="fas fa-check-circle text-primary"></i>
-                  <span class="text-neutral-700">Fast Learner</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <i class="fas fa-check-circle text-primary"></i>
-                  <span class="text-neutral-700">Detail Oriented</span>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-4">
-                <div class="stat-card p-4 rounded-lg">
-                  <div class="text-3xl font-bold text-primary">30</div>
-                  <div class="text-neutral-600">Juz Selesai</div>
-                </div>
-                <div class="stat-card p-4 rounded-lg">
-                  <div class="text-3xl font-bold text-primary">3+</div>
-                  <div class="text-neutral-600">Tahun Santri</div>
-                </div>
-                <div class="stat-card p-4 rounded-lg">
-                  <div class="text-3xl font-bold text-primary">10+</div>
-                  <div class="text-neutral-600">Proyek Web</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="py-20 bg-neutral-50">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Keahlian <span class="gradient-text">Saya</span></h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-              <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">HTML</span>
-                    <span class="text-primary">90%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">CSS</span>
-                    <span class="text-primary">85%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 85%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">Tailwind CSS</span>
-                    <span class="text-primary">80%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 80%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">Bootstrap</span>
-                    <span class="text-primary">75%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 75%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-              <h3 class="text-xl font-semibold mb-6">Backend & Tools</h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">Python</span>
-                    <span class="text-primary">70%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 70%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">Django</span>
-                    <span class="text-primary">65%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 65%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">GitHub</span>
-                    <span class="text-primary">80%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 80%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-neutral-700">SQL</span>
-                    <span class="text-primary">60%</span>
-                  </div>
-                  <div class="w-full bg-neutral-200 rounded-full h-3">
-                    <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 60%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-white p-4 rounded-xl text-center card-hover">
-              <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
-              <p class="text-neutral-700">HTML5</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl text-center card-hover">
-              <i class="fab fa-css3-alt text-4xl text-primary mb-2"></i>
-              <p class="text-neutral-700">CSS3</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl text-center card-hover">
-              <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
-              <p class="text-neutral-700">Python</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl text-center card-hover">
-              <i class="fab fa-git-alt text-4xl text-red-500 mb-2"></i>
-              <p class="text-neutral-700">Git</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Main Portfolio Section (Hub) -->
-      <section id="portfolio-main" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Portofolio <span class="gradient-text">Saya</span></h2>
-          <div class="max-w-4xl mx-auto mb-16">
-            <div class="bg-white rounded-xl shadow-xl p-8">
-              <h3 class="text-2xl font-semibold mb-6">Jelajahi Karya Saya</h3>
-              <p class="text-neutral-600 mb-8 leading-relaxed">
-                Selama perjalanan saya sebagai santri dan web developer, saya telah berkesempatan untuk mengerjakan berbagai proyek yang menggabungkan antara ilmu agama dan teknologi. Dari pengembangan website hingga dokumentasi tasmi' dan
-                hafalan, setiap karya mencerminkan dedikasi saya untuk terus belajar dan berkembang.
-              </p>
-              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="project 1.html" class="feature-card p-6 text-center card-hover">
-                  <div class="feature-icon blue-icon mx-auto mb-4">
-                    <i class="fas fa-code text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-semibold mb-2">Proyek Web</h3>
-                  <p class="text-neutral-600">Website dan aplikasi yang telah saya kembangkan</p>
-                </a>
-
-                <a href="project 2 .html" class="feature-card p-6 text-center card-hover">
-                  <div class="feature-icon blue-icon mx-auto mb-4">
-                    <i class="fas fa-book-quran text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-semibold mb-2">Tasmi' Al-Quran</h3>
-                  <p class="text-neutral-600">Video dokumentasi</p>
-                </a>
-
-                <a href="project 3 .html" class="feature-card p-6 text-center card-hover">
-                  <div class="feature-icon blue-icon mx-auto mb-4">
-                    <i class="fas fa-book-open text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-semibold mb-2">Perjalanan Tahfidz</h3>
-                  <p class="text-neutral-600">Dokumentasi perjalanan saya sebagai hafidz</p>
-                </a>
-
-                <a href="project 4  .html" class="feature-card p-6 text-center card-hover">
-                  <div class="feature-icon blue-icon mx-auto mb-4">
-                    <i class="fas fa-language text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-semibold mb-2">Bahasa Arab</h3>
-                  <p class="text-neutral-600">Presentasi dan pembelajaran bahasa Arab</p>
-                </a>
-
-                <a href="project 5 .html" class="feature-card p-6 text-center card-hover">
-                  <div class="feature-icon blue-icon mx-auto mb-4">
-                    <i class="fas fa-language text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-semibold mb-2">Tahajji</h3>
-                  <p class="text-neutral-600">Presentasi dan pembelajaran Tahajji</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="py-20 bg-neutral-50">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Perjalanan <span class="gradient-text">Belajar</span></h2>
-          <div class="max-w-4xl mx-auto">
+          <div class="md:w-1/2 flex justify-center">
             <div class="relative">
-              <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-lighter"></div>
-              <div class="space-y-12">
-                <div class="relative flex items-start">
-                  <div class="timeline-dot ml-8"></div>
-                  <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                      <h3 class="text-xl font-semibold">Ma'had HSI</h3>
-                      <span class="text-primary text-sm mt-1 sm:mt-0">2025 - Sekarang</span>
-                    </div>
-                    <h4 class="text-neutral-600 mb-3">Santri & Web Developer</h4>
-                    <ul class="text-neutral-600 space-y-1">
-                      <li>• Melanjutkan pendidikan agama sambil mendalami pemrograman web</li>
-                      <li>• Fokus pada HTML, CSS, dan Python</li>
-                      <li>• Membangun proyek-proyek web untuk komunitas</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="relative flex items-start">
-                  <div class="timeline-dot ml-8"></div>
-                  <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                      <h3 class="text-xl font-semibold">Ma'had Darul Fatah</h3>
-                      <span class="text-primary text-sm mt-1 sm:mt-0">2021 - 2024</span>
-                    </div>
-                    <h4 class="text-neutral-600 mb-3">Santri & Hafidz 30 Juz</h4>
-                    <ul class="text-neutral-600 space-y-1">
-                      <li>• Menyelesaikan hafalan 30 juz Al-Quran</li>
-                      <li>• Mendalami ilmu-ilmu agama Islam</li>
-                      <li>• Mulai mempelajari dasar-dasar pemrograman web</li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-primary/20 to-primary-light/20 absolute -top-10 -right-10 float-animation"></div>
+              <img src="assets/photo_2025-12-19_08-48-18.jpg" alt="Profile" class="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-4 border-white/20" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Tentang <span class="gradient-text">Saya</span></h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in-up">
+            <img src="assets/photo_2025-12-19_08-48-17.jpg" alt="About" class="rounded-xl shadow-xl w-full" />
+          </div>
+          <div class="fade-in-up">
+            <h3 class="text-2xl font-semibold mb-4">Santri & Web Developer</h3>
+            <p class="text-neutral-600 mb-6 leading-relaxed">
+              Saya adalah seorang santri yang telah menyelesaikan hafalan 30 juz di Ma'had Darul Fatah Pangkal Pinang, Bangka Belitung. Saat ini, saya sedang melanjutkan perjalanan pendidikan saya di Ma'had HSI sambil mendalami dunia
+              pemrograman web. Saya percaya bahwa kombinasi antara ilmu agama dan teknologi dapat menciptakan solusi yang inovatif dan bermanfaat bagi masyarakat.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-neutral-700">Hafidz 30 Juz</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-neutral-700">Problem Solver</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-neutral-700">Fast Learner</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="text-neutral-700">Detail Oriented</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="stat-card p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary">30</div>
+                <div class="text-neutral-600">Juz Selesai</div>
+              </div>
+              <div class="stat-card p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary">3+</div>
+                <div class="text-neutral-600">Tahun Santri</div>
+              </div>
+              <div class="stat-card p-4 rounded-lg">
+                <div class="text-3xl font-bold text-primary">10+</div>
+                <div class="text-neutral-600">Proyek Web</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Hubungi <span class="gradient-text">Saya</span></h2>
-          <div class="max-w-4xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-8">
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-neutral-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Keahlian <span class="gradient-text">Saya</span></h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
+            <div class="space-y-4">
               <div>
-                <h3 class="text-2xl font-semibold mb-6">Mari Berkolaborasi!</h3>
-                <p class="text-neutral-600 mb-8">Saya selalu terbuka untuk diskusi tentang proyek web, ide kreatif, atau peluang kolaborasi. Jangan ragu untuk menghubungi saya!</p>
-                <div class="space-y-4">
-                  <div class="flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-envelope text-primary"></i>
-                    </div>
-                    <div>
-                      <p class="text-neutral-600">Email</p>
-                      <p class="font-semibold">fazinhanzala@gmail.com</p>
-                    </div>
-                  </div>
-                  <div class="flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-phone text-primary"></i>
-                    </div>
-                    <div>
-                      <p class="text-neutral-600">Telepon</p>
-                      <p class="font-semibold">+62 831 6104 2458</p>
-                    </div>
-                  </div>
-                  <div class="flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-map-marker-alt text-primary"></i>
-                    </div>
-                    <div>
-                      <p class="text-neutral-600">Lokasi</p>
-                      <p class="font-semibold">Bangka Belitung, Indonesia</p>
-                    </div>
-                  </div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">HTML</span>
+                  <span class="text-primary">90%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 90%"></div>
                 </div>
               </div>
               <div>
-                <form id="contactForm" class="space-y-4">
-                  <div>
-                    <input type="text" id="name" placeholder="Nama Lengkap" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
-                  </div>
-                  <div>
-                    <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
-                  </div>
-                  <div>
-                    <input type="text" id="subject" placeholder="Subjek" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
-                  </div>
-                  <div>
-                    <textarea id="message" rows="5" placeholder="Pesan Anda" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
-                  </div>
-                  <button type="submit" class="w-full py-3 btn-primary text-white rounded-lg">Kirim Pesan</button>
-                </form>
-                <div id="successMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">Pesan Anda telah terkirim! Saya akan segera menghubungi Anda.</div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">CSS</span>
+                  <span class="text-primary">85%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">Tailwind CSS</span>
+                  <span class="text-primary">80%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">Bootstrap</span>
+                  <span class="text-primary">75%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-6">Backend & Tools</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">Python</span>
+                  <span class="text-primary">70%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 70%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">Django</span>
+                  <span class="text-primary">65%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 65%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">GitHub</span>
+                  <span class="text-primary">80%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-neutral-700">SQL</span>
+                  <span class="text-primary">60%</span>
+                </div>
+                <div class="w-full bg-neutral-200 rounded-full h-3">
+                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 60%"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-white p-4 rounded-xl text-center card-hover">
+            <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+            <p class="text-neutral-700">HTML5</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl text-center card-hover">
+            <i class="fab fa-css3-alt text-4xl text-primary mb-2"></i>
+            <p class="text-neutral-700">CSS3</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl text-center card-hover">
+            <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
+            <p class="text-neutral-700">Python</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl text-center card-hover">
+            <i class="fab fa-git-alt text-4xl text-red-500 mb-2"></i>
+            <p class="text-neutral-700">Git</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- Footer -->
-      <footer class="bg-neutral-900 text-white py-8">
-        <div class="container mx-auto px-6">
-          <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-              <p>&copy; 2024 Fazin Hanzala. All rights reserved.</p>
-            </div>
-            <div class="flex space-x-6">
-              <a href="https://github.com/" class="hover:text-primary-light transition-colors">
-                <i class="fab fa-github text-xl"></i>
+    <!-- Main Portfolio Section (Hub) -->
+    <section id="portfolio-main" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Portofolio <span class="gradient-text">Saya</span></h2>
+        <div class="max-w-4xl mx-auto mb-16">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <h3 class="text-2xl font-semibold mb-6">Jelajahi Karya Saya</h3>
+            <p class="text-neutral-600 mb-8 leading-relaxed">
+              Selama perjalanan saya sebagai santri dan web developer, saya telah berkesempatan untuk mengerjakan berbagai proyek yang menggabungkan antara ilmu agama dan teknologi. Dari pengembangan website hingga dokumentasi tasmi' dan
+              hafalan, setiap karya mencerminkan dedikasi saya untuk terus belajar dan berkembang.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <a href="project 1.html" class="feature-card p-6 text-center card-hover">
+                <div class="feature-icon blue-icon mx-auto mb-4">
+                  <i class="fas fa-code text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Proyek Web</h3>
+                <p class="text-neutral-600">Website dan aplikasi yang telah saya kembangkan</p>
               </a>
-              <a href="https://www.instagram.com/accounts/onetap/?next=%2F" class="hover:text-primary-light transition-colors">
-                <i class="fab fa-instagram text-xl"></i>
+
+              <a href="project 2 .html" class="feature-card p-6 text-center card-hover">
+                <div class="feature-icon blue-icon mx-auto mb-4">
+                  <i class="fas fa-book-quran text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Tasmi' Al-Quran</h3>
+                <p class="text-neutral-600">Video dokumentasi</p>
+              </a>
+
+              <a href="project 3 .html" class="feature-card p-6 text-center card-hover">
+                <div class="feature-icon blue-icon mx-auto mb-4">
+                  <i class="fas fa-book-open text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Perjalanan Tahfidz</h3>
+                <p class="text-neutral-600">Dokumentasi perjalanan saya sebagai hafidz</p>
+              </a>
+
+              <a href="project 4  .html" class="feature-card p-6 text-center card-hover">
+                <div class="feature-icon blue-icon mx-auto mb-4">
+                  <i class="fas fa-language text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Bahasa Arab</h3>
+                <p class="text-neutral-600">Presentasi dan pembelajaran bahasa Arab</p>
+              </a>
+
+              <a href="project 5 .html" class="feature-card p-6 text-center card-hover">
+                <div class="feature-icon blue-icon mx-auto mb-4">
+                  <i class="fas fa-book-open text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Tahajji</h3>
+                <p class="text-neutral-600">Presentasi dan pembelajaran Tahajji</p>
               </a>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </section>
 
-      <script>
-        // Name Typing Effect
-        const nameElement = document.getElementById('nameTyping');
-        const name = 'Fazin Hanzala';
-        let nameIndex = 0;
-        let isDeletingName = false;
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-neutral-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Perjalanan <span class="gradient-text">Belajar</span></h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="relative">
+            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-lighter"></div>
+            <div class="space-y-12">
+              <div class="relative flex items-start">
+                <div class="timeline-dot ml-8"></div>
+                <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
+                  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                    <h3 class="text-xl font-semibold">Ma'had HSI</h3>
+                    <span class="text-primary text-sm mt-1 sm:mt-0">2025 - Sekarang</span>
+                  </div>
+                  <h4 class="text-neutral-600 mb-3">Santri & Web Developer</h4>
+                  <ul class="text-neutral-600 space-y-1">
+                    <li>• Melanjutkan pendidikan agama sambil mendalami pemrograman web</li>
+                    <li>• Fokus pada HTML, CSS, dan Python</li>
+                    <li>• Membangun proyek-proyek web untuk komunitas</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="timeline-dot ml-8"></div>
+                <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
+                  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                    <h3 class="text-xl font-semibold">Ma'had Darul Fatah</h3>
+                    <span class="text-primary text-sm mt-1 sm:mt-0">2021 - 2024</span>
+                  </div>
+                  <h4 class="text-neutral-600 mb-3">Santri & Hafidz 30 Juz</h4>
+                  <ul class="text-neutral-600 space-y-1">
+                    <li>• Menyelesaikan hafalan 30 juz Al-Quran</li>
+                    <li>• Mendalami ilmu-ilmu agama Islam</li>
+                    <li>• Mulai mempelajari dasar-dasar pemrograman web</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        function typeNameEffect() {
-          if (!isDeletingName) {
-            nameElement.textContent = name.substring(0, nameIndex + 1);
-            nameIndex++;
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Hubungi <span class="gradient-text">Saya</span></h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">Mari Berkolaborasi!</h3>
+              <p class="text-neutral-600 mb-8">Saya selalu terbuka untuk diskusi tentang proyek web, ide kreatif, atau peluang kolaborasi. Jangan ragu untuk menghubungi saya!</p>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-envelope text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="text-neutral-600">Email</p>
+                    <p class="font-semibold">fazinhanzala@gmail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-phone text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="text-neutral-600">Telepon</p>
+                    <p class="font-semibold">+62 831 6104 2458</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                  <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="text-neutral-600">Lokasi</p>
+                    <p class="font-semibold">Bangka Belitung, Indonesia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <form id="contactForm" class="space-y-4">
+                <div>
+                  <input type="text" id="name" placeholder="Nama Lengkap" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <input type="text" id="subject" placeholder="Subjek" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
+                </div>
+                <div>
+                  <textarea id="message" rows="5" placeholder="Pesan Anda" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 btn-primary text-white rounded-lg">Kirim Pesan</button>
+              </form>
+              <div id="successMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">Pesan Anda telah terkirim! Saya akan segera menghubungi Anda.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            if (nameIndex === name.length) {
-              isDeletingName = true;
-              setTimeout(typeNameEffect, 2000);
-              return;
-            }
-          } else {
-            nameElement.textContent = name.substring(0, nameIndex - 1);
-            nameIndex--;
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p>&copy; 2024 Fazin Hanzala. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="https://github.com/" class="hover:text-primary-light transition-colors">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/accounts/onetap/?next=%2F" class="hover:text-primary-light transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-            if (nameIndex === 0) {
-              isDeletingName = false;
-            }
+    <script>
+      // Name Typing Effect
+      const nameElement = document.getElementById('nameTyping');
+      const name = 'Fazin Hanzala';
+      let nameIndex = 0;
+      let isDeletingName = false;
+
+      function typeNameEffect() {
+        if (!isDeletingName) {
+          nameElement.textContent = name.substring(0, nameIndex + 1);
+          nameIndex++;
+
+          if (nameIndex === name.length) {
+            isDeletingName = true;
+            setTimeout(typeNameEffect, 2000);
+            return;
           }
+        } else {
+          nameElement.textContent = name.substring(0, nameIndex - 1);
+          nameIndex--;
 
-          setTimeout(typeNameEffect, isDeletingName ? 50 : 150);
+          if (nameIndex === 0) {
+            isDeletingName = false;
+          }
         }
 
-        // Role Typing Effect
-        const roleTexts = ['Santri', 'Web Developer', 'Hafidz 30 Juz', 'Python Enthusiast'];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeletingRole = false;
+        setTimeout(typeNameEffect, isDeletingName ? 50 : 150);
+      }
 
-        function typeRoleEffect() {
-          const currentText = roleTexts[roleIndex];
-          const typingElement = document.getElementById('roleTyping');
+      // Role Typing Effect
+      const roleTexts = ['Santri', 'Web Developer', 'Hafidz 30 Juz', 'Python Enthusiast'];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeletingRole = false;
 
-          if (!isDeletingRole) {
-            typingElement.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
+      function typeRoleEffect() {
+        const currentText = roleTexts[roleIndex];
+        const typingElement = document.getElementById('roleTyping');
 
-            if (charIndex === currentText.length) {
-              isDeletingRole = true;
-              setTimeout(typeRoleEffect, 2000);
-              return;
-            }
-          } else {
-            typingElement.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
+        if (!isDeletingRole) {
+          typingElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
 
-            if (charIndex === 0) {
-              isDeletingRole = false;
-              roleIndex = (roleIndex + 1) % roleTexts.length;
-            }
+          if (charIndex === currentText.length) {
+            isDeletingRole = true;
+            setTimeout(typeRoleEffect, 2000);
+            return;
           }
+        } else {
+          typingElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
 
-          setTimeout(typeRoleEffect, isDeletingRole ? 50 : 100);
+          if (charIndex === 0) {
+            isDeletingRole = false;
+            roleIndex = (roleIndex + 1) % roleTexts.length;
+          }
         }
 
-        // Start both typing effects when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-          typeNameEffect();
-          typeRoleEffect();
-        });
+        setTimeout(typeRoleEffect, isDeletingRole ? 50 : 100);
+      }
 
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
+      // Start both typing effects when page loads
+      document.addEventListener('DOMContentLoaded', () => {
+        typeNameEffect();
+        typeRoleEffect();
+      });
 
-        mobileMenuToggle.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
+      // Mobile Menu Toggle
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
 
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
 
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
-          body.classList.add('dark-mode');
-          const icon = darkModeToggle.querySelector('i');
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
+      // Dark Mode Toggle
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const body = document.body;
+
+      // Check for saved theme preference or default to light mode
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        const icon = darkModeToggle.querySelector('i');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
+
+      darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const icon = darkModeToggle.querySelector('i');
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+        
+        // Save the theme preference
+        if (body.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
         }
+      });
 
-        darkModeToggle.addEventListener('click', () => {
-          body.classList.toggle('dark-mode');
-          const icon = darkModeToggle.querySelector('i');
-          icon.classList.toggle('fa-moon');
-          icon.classList.toggle('fa-sun');
-          
-          // Save the theme preference
-          if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-          } else {
-            localStorage.setItem('theme', 'light');
-          }
-        });
+      // Navbar Scroll Effect
+      const navbar = document.getElementById('navbar');
 
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('shadow-lg');
+        } else {
+          navbar.classList.remove('shadow-lg');
+        }
+      });
 
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 50) {
-            navbar.classList.add('shadow-lg');
-          } else {
-            navbar.classList.remove('shadow-lg');
-          }
-        });
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-              });
-              // Close mobile menu if open
+      // Smooth Scroll for Navigation Links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const href = this.getAttribute('href') || '';
+          if (!href.startsWith('#') || href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            // Smooth scroll to the target section
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+            // Close mobile menu if open
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
               mobileMenu.classList.add('hidden');
             }
-          });
+          }
         });
+      });
 
-        // Page Navigation
-        const pageLinks = document.querySelectorAll('a[href^="#"]');
-        const pageSections = document.querySelectorAll('.page-section');
+      // Active Navigation Link Highlight
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
 
-        pageLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            
-            // Hide all sections
-            pageSections.forEach(section => {
-              section.classList.remove('active');
+      function highlightActiveSection() {
+        const scrollY = window.pageYOffset;
+
+        sections.forEach((section) => {
+          const sectionHeight = section.offsetHeight;
+          const sectionTop = section.offsetTop - 100;
+          const sectionId = section.getAttribute('id');
+
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach((link) => {
+              link.classList.remove('active-nav');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active-nav');
+              }
             });
-            
-            // Show the target section
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-              targetSection.classList.add('active');
-            }
-          });
+          }
         });
+      }
 
-        // Contact Form
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
+      window.addEventListener('scroll', highlightActiveSection);
 
-        contactForm.addEventListener('submit', (e) => {
-          e.preventDefault();
+      // Contact Form
+      const contactForm = document.getElementById('contactForm');
+      const successMessage = document.getElementById('successMessage');
 
-          // Get form values
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const subject = document.getElementById('subject').value;
-          const message = document.getElementById('message').value;
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-          // Here you would normally send data to a server
-          console.log('Form submitted:', { name, email, subject, message });
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
 
-          // Show success message
-          successMessage.classList.remove('hidden');
-          contactForm.reset();
+        // Here you would normally send data to a server
+        console.log('Form submitted:', { name, email, subject, message });
 
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            successMessage.classList.add('hidden');
-          }, 5000);
+        // Show success message
+        successMessage.classList.remove('hidden');
+        contactForm.reset();
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.add('hidden');
+        }, 5000);
+      });
+
+      // Intersection Observer for Animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
         });
+      }, observerOptions);
 
-        // Intersection Observer for Animations
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px',
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = '1';
-              entry.target.style.transform = 'translateY(0)';
-            }
-          });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach((section) => {
-          section.style.opacity = '0';
-          section.style.transform = 'translateY(20px)';
-          section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-          observer.observe(section);
-        });
-      </script>
+      // Observe all sections for animation
+      document.querySelectorAll('section').forEach((section) => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+      });
+    </script>
   </body>
 </html>
