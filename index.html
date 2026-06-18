@@ -48,6 +48,7 @@
       body {
         font-family: 'Inter', sans-serif;
         background-color: var(--neutral-50);
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       .font-display {
@@ -135,80 +136,202 @@
         }
       }
 
-      .dark-mode {
-        background-color: var(--neutral-800);
-        color: var(--neutral-100);
-      }
-
-      /* Dark mode styles */
+      /* ============================================
+         DARK MODE STYLES - DIPERBAIKI
+         ============================================ */
       body.dark-mode {
         background-color: var(--neutral-900);
-        color: var(--neutral-100);
+        color: #e2e8f0;
       }
 
+      /* Background untuk section */
       body.dark-mode .bg-white {
-        background-color: var(--neutral-800) !important;
+        background-color: #1e293b !important;
       }
 
       body.dark-mode .bg-neutral-50 {
-        background-color: var(--neutral-900) !important;
+        background-color: #0f172a !important;
       }
 
-      body.dark-mode .text-neutral-900 {
-        color: var(--neutral-100) !important;
+      body.dark-mode .bg-neutral-100 {
+        background-color: #1e293b !important;
       }
 
-      body.dark-mode .text-neutral-700 {
-        color: var(--neutral-300) !important;
+      /* Text colors - SEMUA teks menjadi terang */
+      body.dark-mode .text-neutral-900,
+      body.dark-mode .text-neutral-800,
+      body.dark-mode .text-neutral-700,
+      body.dark-mode .text-neutral-600,
+      body.dark-mode .text-neutral-500 {
+        color: #e2e8f0 !important;
       }
 
-      body.dark-mode .text-neutral-600 {
-        color: var(--neutral-400) !important;
-      }
-
-      body.dark-mode .border-neutral-300 {
-        border-color: var(--neutral-600) !important;
-      }
-
-      body.dark-mode .shadow-lg {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
-      }
-
-      body.dark-mode .shadow-xl {
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
-      }
-
-      body.dark-mode .hero-gradient {
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #020617 100%);
-      }
-
-      body.dark-mode #navbar {
-        background-color: rgba(15, 23, 42, 0.9) !important;
-      }
-
-      body.dark-mode .feature-card {
-        background-color: var(--neutral-800);
-      }
-
+      /* Khusus untuk stat card */
       body.dark-mode .stat-card {
-        background-color: var(--neutral-800);
+        background-color: #1e293b !important;
+        border-color: #3b82f6;
       }
 
-      body.dark-mode .w-full.bg-neutral-200 {
-        background-color: var(--neutral-700) !important;
+      body.dark-mode .stat-card .text-neutral-600 {
+        color: #94a3b8 !important;
       }
 
+      body.dark-mode .stat-card .text-primary {
+        color: #3f4041 !important;
+      }
+
+      /* Feature card di dark mode */
+      body.dark-mode .feature-card {
+        background-color: #1e293b !important;
+        border: 1px solid #334155;
+      }
+
+      body.dark-mode .feature-card .text-neutral-600 {
+        color: #94a3b8 !important;
+      }
+
+      body.dark-mode .feature-card .text-xl {
+        color: #f1f5f9 !important;
+      }
+
+      /* Card hover di dark mode */
+      body.dark-mode .card-hover {
+        background-color: #1e293b !important;
+      }
+
+      body.dark-mode .card-hover .text-neutral-700 {
+        color: #e2e8f0 !important;
+      }
+
+      /* Shadow di dark mode */
+      body.dark-mode .shadow-lg,
+      body.dark-mode .shadow-xl,
+      body.dark-mode .shadow-2xl {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      /* Border di dark mode */
+      body.dark-mode .border-neutral-300,
+      body.dark-mode .border-neutral-200 {
+        border-color: #334155 !important;
+      }
+
+      /* Navbar di dark mode */
+      body.dark-mode #navbar {
+        background-color: rgba(15, 23, 42, 0.95) !important;
+      }
+
+      body.dark-mode #navbar .text-neutral-700 {
+        color: #e2e8f0 !important;
+      }
+
+      body.dark-mode #navbar .text-neutral-700:hover {
+        color: #60a5fa !important;
+      }
+
+      /* Hero section di dark mode */
+      body.dark-mode .hero-gradient {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%) !important;
+      }
+
+      body.dark-mode .hero-gradient .text-neutral-900 {
+        color: #f1f5f9 !important;
+      }
+
+      body.dark-mode .hero-gradient .text-neutral-600,
+      body.dark-mode .hero-gradient .text-neutral-700 {
+        color: #94a3b8 !important;
+      }
+
+      /* Skills section di dark mode */
+      body.dark-mode #skills .bg-white {
+        background-color: #1e293b !important;
+      }
+
+      body.dark-mode #skills .text-neutral-700 {
+        color: #e2e8f0 !important;
+      }
+
+      body.dark-mode #skills .bg-neutral-200 {
+        background-color: #334155 !important;
+      }
+
+      /* Timeline cards di dark mode */
+      body.dark-mode .timeline-dot + .bg-white {
+        background-color: #1e293b !important;
+      }
+
+      body.dark-mode .timeline-dot + .bg-white .text-neutral-600 {
+        color: #94a3b8 !important;
+      }
+
+      body.dark-mode .timeline-dot + .bg-white .text-xl {
+        color: #f1f5f9 !important;
+      }
+
+      /* Contact form di dark mode */
+      body.dark-mode #contact .bg-white {
+        background-color: #0f172a !important;
+      }
+
+      body.dark-mode #contact input,
+      body.dark-mode #contact textarea {
+        background-color: #1e293b !important;
+        border-color: #334155 !important;
+        color: #e2e8f0 !important;
+      }
+
+      body.dark-mode #contact input::placeholder,
+      body.dark-mode #contact textarea::placeholder {
+        color: #64748b !important;
+      }
+
+      body.dark-mode #contact input:focus,
+      body.dark-mode #contact textarea:focus {
+        border-color: #3b82f6 !important;
+        outline: none !important;
+      }
+
+      /* Icon containers di dark mode */
+      body.dark-mode .bg-primary-lightest {
+        background-color: #1e3a5f !important;
+      }
+
+      body.dark-mode .bg-primary-lightest .text-primary {
+        color: #60a5fa !important;
+      }
+
+      /* Footer di dark mode */
       body.dark-mode footer {
         background-color: #020617 !important;
       }
 
-      body.dark-mode .video-info {
-        background-color: var(--neutral-800);
+      /* Mobile menu di dark mode */
+      body.dark-mode #mobileMenu a {
+        color: #e2e8f0 !important;
       }
 
-      body.dark-mode .project-description {
-        background-color: rgba(59, 130, 246, 0.1);
+      body.dark-mode #mobileMenu a:hover {
+        color: #60a5fa !important;
       }
+
+      /* Dark mode toggle button */
+      body.dark-mode #darkModeToggle .fa-moon {
+        color: #e2e8f0 !important;
+      }
+
+      body.dark-mode #darkModeToggle .fa-sun {
+        color: #fbbf24 !important;
+      }
+
+      /* Hamburger menu di dark mode */
+      body.dark-mode #mobileMenuToggle .fa-bars {
+        color: #e2e8f0 !important;
+      }
+
+      /* ============================================
+         END DARK MODE STYLES
+         ============================================ */
 
       .timeline-dot {
         position: relative;
@@ -225,28 +348,6 @@
         top: 5px;
       }
 
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-      }
-
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .glass-effect {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
       .active-nav {
         position: relative;
       }
@@ -259,55 +360,6 @@
         width: 100%;
         height: 2px;
         background: var(--gradient-accent);
-      }
-
-      .project-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(96, 165, 250, 0.95) 100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .project-card:hover .project-overlay {
-        opacity: 1;
-      }
-
-      .project-icon {
-        font-size: 3rem;
-        color: white;
-        margin-bottom: 1rem;
-      }
-
-      .project-title {
-        color: white;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-      }
-
-      .project-category {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.9rem;
-      }
-
-      .tech-badge {
-        background: var(--gradient-neutral);
-        border: 1px solid var(--neutral-300);
-        transition: all 0.2s ease;
-      }
-
-      .tech-badge:hover {
-        background: var(--gradient-accent);
-        color: white;
-        transform: translateY(-2px);
       }
 
       .nav-link {
@@ -421,28 +473,13 @@
         color: var(--primary-dark);
       }
 
-      .quran-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      }
-
-      .arabic-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-      }
-
-      .design-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      }
-
-      /* Perbaikan untuk bagian desain - Memastikan foto tampil tinggi (poster) dan responsif */
       .design-project-card {
         position: relative;
         overflow: hidden;
         border-radius: 12px;
         box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
         transition: all 0.3s ease;
-        /* Reset transform untuk memastikan tidak miring */
         transform: none !important;
-        /* Gunakan aspect-ratio untuk menjaga rasio tinggi di semua ukuran layar */
         aspect-ratio: 2 / 3;
         width: 100%;
       }
@@ -457,7 +494,6 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        /* Reset transform untuk memastikan gambar tidak miring */
         transform: none !important;
         transition: transform 0.3s ease;
       }
@@ -509,6 +545,11 @@
         color: white;
         transform: translateY(-2px);
       }
+
+      /* Dark mode untuk design project cards */
+      body.dark-mode .design-project-card {
+        background-color: #1e293b !important;
+      }
     </style>
   </head>
   <body class="bg-neutral-50">
@@ -536,12 +577,12 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-          <a href="#home" class="block py-2 text-neutral-700 hover:text-primary">Beranda</a>
-          <a href="#about" class="block py-2 text-neutral-700 hover:text-primary">Tentang</a>
-          <a href="#skills" class="block py-2 text-neutral-700 hover:text-primary">Keahlian</a>
-          <a href="#portfolio-main" class="block py-2 text-neutral-700 hover:text-primary">Portofolio Saya</a>
-          <a href="#experience" class="block py-2 text-neutral-700 hover:text-primary">Pengalaman</a>
-          <a href="#contact" class="block py-2 text-neutral-700 hover:text-primary">Kontak</a>
+          <a href="#home" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Beranda</a>
+          <a href="#about" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Tentang</a>
+          <a href="#skills" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Keahlian</a>
+          <a href="#portfolio-main" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Portofolio Saya</a>
+          <a href="#experience" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Pengalaman</a>
+          <a href="#contact" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Kontak</a>
         </div>
       </div>
     </nav>
@@ -586,19 +627,37 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Tentang <span class="gradient-text">Saya</span></h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="fade-in-up">
-            <img src="assets/photo_2025-12-19_08-48-17.jpg" alt="About" class="rounded-xl shadow-xl w-full" />
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">
+          Tentang <span class="gradient-text">Saya</span>
+        </h2>
+
+        <div class="grid md:grid-cols-[320px_1fr] gap-8 items-start">
+          <!-- FOTO -->
+          <div class="fade-in-up flex justify-center">
+            <img 
+              src="assets/photo_2025-12-19_08-48-17.jpg"
+              alt="About"
+              class="rounded-xl shadow-xl w-80 h-96 object-cover"
+            />
           </div>
+
+          <!-- TEXT -->
           <div class="fade-in-up">
-            <h3 class="text-2xl font-semibold mb-4">Santri & Web Developer</h3>
-            <p class="text-neutral-600 mb-6 leading-relaxed">
-              Saya adalah seorang santri yang telah menyelesaikan hafalan 30 juz di Ma'had Darul Fatah Pangkal Pinang, Bangka Belitung. Saat ini, saya sedang melanjutkan perjalanan pendidikan saya di Ma'had HSI sambil mendalami dunia
-              pemrograman web. Saya percaya bahwa kombinasi antara ilmu agama dan teknologi dapat menciptakan solusi yang inovatif dan bermanfaat bagi masyarakat.
+            <h3 class="text-2xl font-semibold mb-3 text-neutral-900">
+              Santri & Web Developer
+            </h3>
+
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              Saya adalah seorang santri yang telah menyelesaikan hafalan 30 juz 
+              di Ma'had Darul Fatah Pangkal Pinang, Bangka Belitung. Saat ini,
+              saya sedang melanjutkan perjalanan pendidikan saya di Ma'had HSI
+              sambil mendalami dunia pemrograman web. Saya percaya bahwa kombinasi
+              antara ilmu agama dan teknologi dapat menciptakan solusi yang inovatif
+              dan bermanfaat bagi masyarakat.
             </p>
+
             <div class="grid grid-cols-2 gap-4 mb-6">
               <div class="flex items-center space-x-2">
                 <i class="fas fa-check-circle text-primary"></i>
@@ -617,6 +676,7 @@
                 <span class="text-neutral-700">Detail Oriented</span>
               </div>
             </div>
+
             <div class="grid grid-cols-3 gap-4">
               <div class="stat-card p-4 rounded-lg">
                 <div class="text-3xl font-bold text-primary">30</div>
@@ -642,7 +702,7 @@
         <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Keahlian <span class="gradient-text">Saya</span></h2>
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
+            <h3 class="text-xl font-semibold mb-6 text-neutral-900">Frontend Development</h3>
             <div class="space-y-4">
               <div>
                 <div class="flex justify-between mb-2">
@@ -683,7 +743,7 @@
             </div>
           </div>
           <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-xl font-semibold mb-6">Backend & Tools</h3>
+            <h3 class="text-xl font-semibold mb-6 text-neutral-900">Backend & Tools</h3>
             <div class="space-y-4">
               <div>
                 <div class="flex justify-between mb-2">
@@ -751,7 +811,7 @@
         <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Portofolio <span class="gradient-text">Saya</span></h2>
         <div class="max-w-4xl mx-auto mb-16">
           <div class="bg-white rounded-xl shadow-xl p-8">
-            <h3 class="text-2xl font-semibold mb-6">Jelajahi Karya Saya</h3>
+            <h3 class="text-2xl font-semibold mb-6 text-neutral-900">Jelajahi Karya Saya</h3>
             <p class="text-neutral-600 mb-8 leading-relaxed">
               Selama perjalanan saya sebagai santri dan web developer, saya telah berkesempatan untuk mengerjakan berbagai proyek yang menggabungkan antara ilmu agama dan teknologi. Dari pengembangan website hingga dokumentasi tasmi' dan
               hafalan, setiap karya mencerminkan dedikasi saya untuk terus belajar dan berkembang.
@@ -761,7 +821,7 @@
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-code text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Proyek Web</h3>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Proyek Web</h3>
                 <p class="text-neutral-600">Website dan aplikasi yang telah saya kembangkan</p>
               </a>
 
@@ -769,7 +829,7 @@
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-quran text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Tasmi' Al-Quran</h3>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Tasmi' Al-Quran</h3>
                 <p class="text-neutral-600">Video dokumentasi</p>
               </a>
 
@@ -777,7 +837,7 @@
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-open text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Perjalanan Tahfidz</h3>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Perjalanan Tahfidz</h3>
                 <p class="text-neutral-600">Dokumentasi perjalanan saya sebagai hafidz</p>
               </a>
 
@@ -785,7 +845,7 @@
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-language text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Bahasa Arab</h3>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Bahasa Arab</h3>
                 <p class="text-neutral-600">Presentasi dan pembelajaran bahasa Arab</p>
               </a>
 
@@ -793,10 +853,17 @@
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-open text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Tahajji</h3>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Tahajji</h3>
                 <p class="text-neutral-600">Presentasi dan pembelajaran Tahajji</p>
               </a>                   
 
+              <a href="project 6 .html" class="feature-card p-6 text-center card-hover">
+                <div class="feature-icon blue-icon mx-auto mb-4">
+                  <i class="fas fa-book-open text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Kitab Mulazzamah</h3>
+                <p class="text-neutral-600">Portofolio dan pembelajaran ilmu Aqidah, Fiqih, dan Shirah Nabawiyyah</p>
+              </a>                   
             </div>
           </div>
         </div>
@@ -815,7 +882,7 @@
                 <div class="timeline-dot ml-8"></div>
                 <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
                   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                    <h3 class="text-xl font-semibold">Ma'had HSI</h3>
+                    <h3 class="text-xl font-semibold text-neutral-900">Ma'had HSI</h3>
                     <span class="text-primary text-sm mt-1 sm:mt-0">2025 - Sekarang</span>
                   </div>
                   <h4 class="text-neutral-600 mb-3">Santri & Web Developer</h4>
@@ -830,14 +897,13 @@
                 <div class="timeline-dot ml-8"></div>
                 <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
                   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                    <h3 class="text-xl font-semibold">Ma'had Darul Fatah</h3>
+                    <h3 class="text-xl font-semibold text-neutral-900">Ma'had Darul Fatah</h3>
                     <span class="text-primary text-sm mt-1 sm:mt-0">2021 - 2024</span>
                   </div>
                   <h4 class="text-neutral-600 mb-3">Santri & Hafidz 30 Juz</h4>
                   <ul class="text-neutral-600 space-y-1">
                     <li>• Menyelesaikan hafalan 30 juz Al-Quran</li>
                     <li>• Mendalami ilmu-ilmu agama Islam</li>
-                    <li>• Mulai mempelajari dasar-dasar pemrograman web</li>
                   </ul>
                 </div>
               </div>
@@ -854,7 +920,7 @@
         <div class="max-w-4xl mx-auto">
           <div class="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 class="text-2xl font-semibold mb-6">Mari Berkolaborasi!</h3>
+              <h3 class="text-2xl font-semibold mb-6 text-neutral-900">Mari Berkolaborasi!</h3>
               <p class="text-neutral-600 mb-8">Saya selalu terbuka untuk diskusi tentang proyek web, ide kreatif, atau peluang kolaborasi. Jangan ragu untuk menghubungi saya!</p>
               <div class="space-y-4">
                 <div class="flex items-center space-x-4">
@@ -863,7 +929,7 @@
                   </div>
                   <div>
                     <p class="text-neutral-600">Email</p>
-                    <p class="font-semibold">fazinhanzala@gmail.com</p>
+                    <p class="font-semibold text-neutral-900">fazinhanzala@gmail.com</p>
                   </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -872,7 +938,7 @@
                   </div>
                   <div>
                     <p class="text-neutral-600">Telepon</p>
-                    <p class="font-semibold">+62 831 6104 2458</p>
+                    <p class="font-semibold text-neutral-900">+62 831 6104 2458</p>
                   </div>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -881,7 +947,7 @@
                   </div>
                   <div>
                     <p class="text-neutral-600">Lokasi</p>
-                    <p class="font-semibold">Bangka Belitung, Indonesia</p>
+                    <p class="font-semibold text-neutral-900">Bangka Belitung, Indonesia</p>
                   </div>
                 </div>
               </div>
@@ -889,16 +955,16 @@
             <div>
               <form id="contactForm" class="space-y-4">
                 <div>
-                  <input type="text" id="name" placeholder="Nama Lengkap" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
+                  <input type="text" id="name" placeholder="Nama Lengkap" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900" />
                 </div>
                 <div>
-                  <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
+                  <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900" />
                 </div>
                 <div>
-                  <input type="text" id="subject" placeholder="Subjek" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors" />
+                  <input type="text" id="subject" placeholder="Subjek" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900" />
                 </div>
                 <div>
-                  <textarea id="message" rows="5" placeholder="Pesan Anda" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                  <textarea id="message" rows="5" placeholder="Pesan Anda" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none text-neutral-900"></textarea>
                 </div>
                 <button type="submit" class="w-full py-3 btn-primary text-white rounded-lg">Kirim Pesan</button>
               </form>
@@ -929,7 +995,9 @@
     </footer>
 
     <script>
-      // Name Typing Effect
+      // ============================================================
+      // 1. NAME TYPING EFFECT
+      // ============================================================
       const nameElement = document.getElementById('nameTyping');
       const name = 'Fazin Hanzala';
       let nameIndex = 0;
@@ -951,24 +1019,28 @@
 
           if (nameIndex === 0) {
             isDeletingName = false;
+            setTimeout(typeNameEffect, 500);
+            return;
           }
         }
 
         setTimeout(typeNameEffect, isDeletingName ? 50 : 150);
       }
 
-      // Role Typing Effect
+      // ============================================================
+      // 2. ROLE TYPING EFFECT
+      // ============================================================
       const roleTexts = ['Santri', 'Web Developer', 'Hafidz 30 Juz', 'Python Enthusiast'];
       let roleIndex = 0;
       let charIndex = 0;
       let isDeletingRole = false;
+      const roleElement = document.getElementById('roleTyping');
 
       function typeRoleEffect() {
         const currentText = roleTexts[roleIndex];
-        const typingElement = document.getElementById('roleTyping');
 
         if (!isDeletingRole) {
-          typingElement.textContent = currentText.substring(0, charIndex + 1);
+          roleElement.textContent = currentText.substring(0, charIndex + 1);
           charIndex++;
 
           if (charIndex === currentText.length) {
@@ -977,60 +1049,78 @@
             return;
           }
         } else {
-          typingElement.textContent = currentText.substring(0, charIndex - 1);
+          roleElement.textContent = currentText.substring(0, charIndex - 1);
           charIndex--;
 
           if (charIndex === 0) {
             isDeletingRole = false;
             roleIndex = (roleIndex + 1) % roleTexts.length;
+            setTimeout(typeRoleEffect, 500);
+            return;
           }
         }
 
         setTimeout(typeRoleEffect, isDeletingRole ? 50 : 100);
       }
 
-      // Start both typing effects when page loads
+      // ============================================================
+      // 3. START ALL EFFECTS
+      // ============================================================
       document.addEventListener('DOMContentLoaded', () => {
         typeNameEffect();
         typeRoleEffect();
       });
 
-      // Mobile Menu Toggle
+      // ============================================================
+      // 4. MOBILE MENU TOGGLE
+      // ============================================================
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');
       const mobileMenu = document.getElementById('mobileMenu');
 
-      mobileMenuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
 
-      // Dark Mode Toggle
+      // ============================================================
+      // 5. DARK MODE TOGGLE
+      // ============================================================
       const darkModeToggle = document.getElementById('darkModeToggle');
       const body = document.body;
 
-      // Check for saved theme preference or default to light mode
+      // Cek tema yang tersimpan
       const currentTheme = localStorage.getItem('theme') || 'light';
       if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
         const icon = darkModeToggle.querySelector('i');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+        if (icon) {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        }
       }
 
-      darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const icon = darkModeToggle.querySelector('i');
-        icon.classList.toggle('fa-moon');
-        icon.classList.toggle('fa-sun');
-        
-        // Save the theme preference
-        if (body.classList.contains('dark-mode')) {
-          localStorage.setItem('theme', 'dark');
-        } else {
-          localStorage.setItem('theme', 'light');
-        }
-      });
+      if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark-mode');
+          const icon = darkModeToggle.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+          }
 
-      // Navbar Scroll Effect
+          // Simpan preferensi tema
+          if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+          } else {
+            localStorage.setItem('theme', 'light');
+          }
+        });
+      }
+
+      // ============================================================
+      // 6. NAVBAR SCROLL EFFECT
+      // ============================================================
       const navbar = document.getElementById('navbar');
 
       window.addEventListener('scroll', () => {
@@ -1041,20 +1131,23 @@
         }
       });
 
-      // Smooth Scroll for Navigation Links
+      // ============================================================
+      // 7. SMOOTH SCROLL & CLOSE MOBILE MENU
+      // ============================================================
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const href = this.getAttribute('href') || '';
-          if (!href.startsWith('#') || href === '#') return;
+          const href = this.getAttribute('href');
+          if (!href || href === '#') return;
+
           const target = document.querySelector(href);
           if (target) {
-            // Smooth scroll to the target section
+            e.preventDefault();
             target.scrollIntoView({
               behavior: 'smooth',
               block: 'start',
             });
-            // Close mobile menu if open
+
+            // Tutup mobile menu jika terbuka
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
               mobileMenu.classList.add('hidden');
             }
@@ -1062,7 +1155,9 @@
         });
       });
 
-      // Active Navigation Link Highlight
+      // ============================================================
+      // 8. ACTIVE NAVIGATION HIGHLIGHT
+      // ============================================================
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('.nav-link');
 
@@ -1077,7 +1172,8 @@
           if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinks.forEach((link) => {
               link.classList.remove('active-nav');
-              if (link.getAttribute('href') === `#${sectionId}`) {
+              const linkHref = link.getAttribute('href');
+              if (linkHref === `#${sectionId}`) {
                 link.classList.add('active-nav');
               }
             });
@@ -1087,33 +1183,35 @@
 
       window.addEventListener('scroll', highlightActiveSection);
 
-      // Contact Form
+      // ============================================================
+      // 9. CONTACT FORM
+      // ============================================================
       const contactForm = document.getElementById('contactForm');
       const successMessage = document.getElementById('successMessage');
 
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
 
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
 
-        // Here you would normally send data to a server
-        console.log('Form submitted:', { name, email, subject, message });
+          console.log('Form submitted:', { name, email, subject, message });
 
-        // Show success message
-        successMessage.classList.remove('hidden');
-        contactForm.reset();
+          successMessage.classList.remove('hidden');
+          contactForm.reset();
 
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          successMessage.classList.add('hidden');
-        }, 5000);
-      });
+          setTimeout(() => {
+            successMessage.classList.add('hidden');
+          }, 5000);
+        });
+      }
 
-      // Intersection Observer for Animations
+      // ============================================================
+      // 10. INTERSECTION OBSERVER FOR ANIMATIONS
+      // ============================================================
       const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px',
@@ -1128,13 +1226,19 @@
         });
       }, observerOptions);
 
-      // Observe all sections for animation
       document.querySelectorAll('section').forEach((section) => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
       });
+
+      // ============================================================
+      // 11. FIX: Perbaikan untuk typing effect di role
+      // ============================================================
+      if (!roleElement) {
+        console.warn('Role typing element not found');
+      }
     </script>
   </body>
 </html>

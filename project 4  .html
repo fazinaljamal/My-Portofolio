@@ -7,8 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
       :root {
         --primary: #3b82f6;
@@ -17,10 +23,6 @@
         --primary-lightest: #dbeafe;
         --primary-dark: #2563eb;
         --primary-darker: #1d4ed8;
-
-        --secondary: #64748b;
-        --secondary-light: #94a3b8;
-        --secondary-lighter: #cbd5e1;
 
         --neutral-50: #f8fafc;
         --neutral-100: #f1f5f9;
@@ -34,88 +36,15 @@
         --neutral-900: #0f172a;
 
         --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-lighter) 100%);
-        --gradient-name: linear-gradient(135deg, #000000 0%, #1e3a8a 30%, #3b82f6 60%, #60a5fa 100%);
-        --gradient-hero: linear-gradient(135deg, #ffffff 0%, var(--neutral-50) 50%, var(--neutral-100) 100%);
         --gradient-accent: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-        --gradient-neutral: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
-        --gradient-icon: linear-gradient(135deg, var(--primary-lightest) 0%, var(--primary-lighter) 100%);
       }
 
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #ffffff;
+        background-color: #f8fafc;
         color: #1e293b;
         transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      /* Dark mode styles */
-      body.dark-mode {
-        background-color: var(--neutral-900);
-        color: var(--neutral-100);
-      }
-
-      body.dark-mode .navbar {
-        background-color: rgba(15, 23, 42, 0.95);
-      }
-
-      body.dark-mode .nav-link {
-        color: var(--neutral-200);
-      }
-
-      body.dark-mode .nav-link:hover {
-        color: var(--primary-light);
-      }
-
-      body.dark-mode .project-description {
-        background-color: rgba(59, 130, 246, 0.1);
-        border-color: rgba(59, 130, 246, 0.2);
-      }
-
-      body.dark-mode .project-title {
-        color: var(--neutral-100);
-      }
-
-      body.dark-mode .video-info {
-        background-color: rgba(59, 130, 246, 0.1);
-        border-color: rgba(59, 130, 246, 0.2);
-      }
-
-      body.dark-mode .video-title {
-        color: var(--neutral-100);
-      }
-
-      body.dark-mode .contact-item {
-        color: var(--neutral-300);
-      }
-
-      body.dark-mode .back-button {
-        background-color: #f59e0b;
-        color: #000;
-      }
-
-      body.dark-mode .back-button:hover {
-        background-color: #d97706;
-      }
-
-      body.dark-mode .mobile-menu {
-        background-color: rgba(15, 23, 42, 0.95);
-      }
-
-      body.dark-mode .fas.fa-bars {
-        color: var(--neutral-200);
-      }
-
-      body.dark-mode .fas.fa-moon,
-      body.dark-mode .fas.fa-sun {
-        color: var(--neutral-200);
-      }
-
-      body.dark-mode .text-neutral-700 {
-        color: var(--neutral-300) !important;
-      }
-
-      body.dark-mode .video-container {
-        background-color: rgba(0, 0, 0, 0.2);
+        min-height: 100vh;
       }
 
       .font-display {
@@ -129,188 +58,31 @@
         background-clip: text;
       }
 
-      .name-gradient {
-        background: var(--gradient-name);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .hero-gradient {
-        background: var(--gradient-hero);
-      }
-
-      .accent-gradient {
-        background: var(--gradient-accent);
-      }
-
-      .card-hover {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.15);
-      }
-
-      .skill-bar {
-        animation: fillBar 2s ease-in-out;
-      }
-
-      @keyframes fillBar {
-        from {
-          width: 0;
-        }
-      }
-
-      .float-animation {
-        animation: float 4s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
-      }
-
-      .typing-effect {
-        overflow: hidden;
-        border-right: 0.15em solid var(--primary-light);
-        white-space: nowrap;
-        animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-      }
-
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: var(--primary-light);
-        }
-      }
-
-      .dark-mode {
-        background-color: var(--neutral-800);
-        color: var(--neutral-100);
-      }
-
-      .timeline-dot {
-        position: relative;
-      }
-
-      .timeline-dot::before {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background: var(--primary);
-        border-radius: 50%;
-        left: -10px;
-        top: 5px;
-      }
-
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-      }
-
-      .video-container iframe {
-        position: absolute;
+      /* ===== NAVBAR ===== */
+      .navbar {
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        right: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+        transition: all 0.3s ease;
       }
 
-      .glass-effect {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .active-nav {
-        position: relative;
-      }
-
-      .active-nav::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--gradient-accent);
-      }
-
-      .project-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(96, 165, 250, 0.95) 100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .project-card:hover .project-overlay {
-        opacity: 1;
-      }
-
-      .project-icon {
-        font-size: 3rem;
-        color: white;
-        margin-bottom: 1rem;
-      }
-
-      .project-title {
-        color: white;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-      }
-
-      .project-category {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.9rem;
-      }
-
-      .tech-badge {
-        background: var(--gradient-neutral);
-        border: 1px solid var(--neutral-300);
-        transition: all 0.2s ease;
-      }
-
-      .tech-badge:hover {
-        background: var(--gradient-accent);
-        color: white;
-        transform: translateY(-2px);
+      .navbar.scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
       }
 
       .nav-link {
         position: relative;
+        color: var(--neutral-600);
+        font-weight: 500;
         transition: color 0.3s ease;
+        padding: 4px 0;
+        text-decoration: none;
       }
 
       .nav-link::after {
@@ -322,61 +94,558 @@
         height: 2px;
         background: var(--gradient-accent);
         transition: width 0.3s ease;
+        border-radius: 2px;
+      }
+
+      .nav-link:hover {
+        color: var(--primary);
       }
 
       .nav-link:hover::after {
         width: 100%;
       }
 
-      .section-title {
-        position: relative;
+      /* ===== DARK MODE ===== */
+      body.dark-mode {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .navbar {
+        background: rgba(15, 23, 42, 0.92);
+        border-bottom-color: rgba(59, 130, 246, 0.15);
+      }
+
+      body.dark-mode .nav-link {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .nav-link:hover {
+        color: #60a5fa;
+      }
+
+      body.dark-mode .back-button {
+        background: #1e293b;
+        color: #e2e8f0;
+        border: 1px solid #334155;
+      }
+
+      body.dark-mode .back-button:hover {
+        background: #334155;
+        color: #60a5fa;
+      }
+
+      body.dark-mode .project-description {
+        background: #1e293b;
+        border-color: #334155;
+      }
+
+      body.dark-mode .project-description p {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .video-card {
+        background: #1e293b;
+        border-color: #334155;
+      }
+
+      body.dark-mode .video-card .video-title {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .video-card .video-meta {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .video-card .video-description {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .stat-box {
+        background: #1e293b;
+        border-color: #334155;
+      }
+
+      body.dark-mode .stat-box .stat-label {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .contact-item {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .contact-item:hover {
+        color: #60a5fa;
+        background: rgba(59, 130, 246, 0.1);
+      }
+
+      body.dark-mode .mobile-menu {
+        background: rgba(15, 23, 42, 0.98);
+        border-color: #1e293b;
+      }
+
+      body.dark-mode .mobile-menu a {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .mobile-menu a:hover {
+        color: #60a5fa;
+      }
+
+      body.dark-mode .dark-mode-toggle {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .dark-mode-toggle:hover {
+        color: #fbbf24;
+      }
+
+      body.dark-mode #mobileMenuToggle i {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .badge-youtube {
+        background: #3a1a1a;
+        color: #ef4444;
+      }
+
+      body.dark-mode .tech-item {
+        background: #1e293b;
+        color: #e2e8f0;
+        border: 1px solid #334155;
+      }
+
+      body.dark-mode .gallery-item {
+        background: #1e293b;
+      }
+
+      body.dark-mode .gallery-item img {
+        opacity: 0.8;
+      }
+
+      body.dark-mode .gallery-item img:hover {
+        opacity: 1;
+      }
+
+      /* ===== BACK BUTTON ===== */
+      .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: white;
+        color: #1e293b;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        text-decoration: none;
+        margin-bottom: 32px;
+      }
+
+      .back-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.12);
+        border-color: #93c5fd;
+      }
+
+      .back-button i {
+        font-size: 0.9rem;
+      }
+
+      /* ===== PROJECT HEADER ===== */
+      .project-header {
+        margin-bottom: 32px;
+      }
+
+      .project-title {
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin-bottom: 12px;
+      }
+
+      .project-badge {
         display: inline-block;
-      }
-
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
         background: var(--gradient-accent);
-      }
-
-      .btn-primary {
-        background: var(--gradient-accent);
-        transition: all 0.3s ease;
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
-      }
-
-      .btn-secondary {
-        border: 2px solid var(--primary);
-        color: var(--primary);
-        transition: all 0.3s ease;
-      }
-
-      .btn-secondary:hover {
-        background: var(--primary);
         color: white;
-        transform: translateY(-2px);
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
       }
 
-      .stat-card {
-        background: var(--gradient-neutral);
-        border-left: 4px solid var(--primary);
+      /* ===== PROJECT DESCRIPTION ===== */
+      .project-description {
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        margin-bottom: 40px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         transition: all 0.3s ease;
       }
 
-      .stat-card:hover {
-        transform: translateX(5px);
-        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+      .project-description h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
       }
 
+      .project-description h2 i {
+        color: var(--primary);
+        font-size: 1.3rem;
+      }
+
+      .project-description p {
+        color: #475569;
+        line-height: 1.8;
+        margin-bottom: 12px;
+      }
+
+      /* ===== TECH ITEMS ===== */
+      .tech-item {
+        display: inline-block;
+        background: #f1f5f9;
+        color: #1e293b;
+        padding: 8px 20px;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+      }
+
+      .tech-item:hover {
+        transform: translateY(-2px);
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+      }
+
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      /* ===== VIDEO CARD ===== */
+      .video-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .video-card:hover {
+        box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+        border-color: #93c5fd;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        background: #0f172a;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .video-info {
+        padding: 24px 28px;
+      }
+
+      .video-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #1e293b;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .video-title i {
+        color: #ef4444;
+        font-size: 1.1rem;
+      }
+
+      .video-description {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .video-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 16px;
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+
+      .video-meta i {
+        color: var(--primary);
+        width: 18px;
+      }
+
+      .video-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .badge-source {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 2px 10px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .badge-youtube {
+        background: #fef2f2;
+        color: #dc2626;
+      }
+
+      .btn-youtube {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #dc2626;
+        color: white;
+        padding: 10px 24px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-youtube:hover {
+        background: #b91c1c;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+      }
+
+      /* ===== GALLERY ===== */
+      .gallery-item {
+        border-radius: 16px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        transition: all 0.4s ease;
+        aspect-ratio: 16/10;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(59, 130, 246, 0.12);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.03);
+      }
+
+      /* ===== STATS ===== */
+      .stat-box {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .stat-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+        border-color: #93c5fd;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary);
+        line-height: 1;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-top: 6px;
+        font-weight: 500;
+      }
+
+      /* ===== CONTACT ===== */
+      .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #475569;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .contact-item:hover {
+        color: var(--primary);
+        background: rgba(59, 130, 246, 0.06);
+      }
+
+      .contact-item i {
+        color: var(--primary);
+        font-size: 1.1rem;
+        width: 20px;
+      }
+
+      /* ===== MOBILE MENU ===== */
+      .mobile-menu {
+        display: none;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 8px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 16px;
+        color: #1e293b;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .mobile-menu a:hover {
+        background: rgba(59, 130, 246, 0.08);
+        color: var(--primary);
+      }
+
+      /* ===== DARK MODE TOGGLE ===== */
+      .dark-mode-toggle {
+        background: none;
+        border: none;
+        color: #475569;
+        cursor: pointer;
+        font-size: 1.25rem;
+        padding: 8px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .dark-mode-toggle:hover {
+        background: rgba(59, 130, 246, 0.08);
+        color: var(--primary);
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .project-title {
+          font-size: 2rem;
+        }
+
+        .project-description {
+          padding: 20px;
+        }
+
+        .project-description h2 {
+          font-size: 1.25rem;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        .video-info {
+          padding: 16px 20px;
+        }
+
+        .video-title {
+          font-size: 1.1rem;
+        }
+
+        .video-meta {
+          font-size: 0.8rem;
+          gap: 12px;
+        }
+
+        .back-button {
+          padding: 10px 18px;
+          font-size: 0.85rem;
+        }
+
+        .gallery-item {
+          aspect-ratio: 16/10;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project-title {
+          font-size: 1.6rem;
+        }
+
+        .project-description {
+          padding: 16px;
+        }
+
+        .stat-box {
+          padding: 16px;
+        }
+
+        .video-info {
+          padding: 14px 16px;
+        }
+
+        .video-title {
+          font-size: 1rem;
+        }
+      }
+
+      /* ===== ANIMATIONS ===== */
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -389,414 +658,262 @@
       }
 
       .fade-in-up {
-        animation: fadeInUp 0.8s ease-out;
+        animation: fadeInUp 0.6s ease-out forwards;
       }
 
-      .feature-card {
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
-        transition: all 0.3s ease;
+      .fade-in-up-delay-1 {
+        animation-delay: 0.1s;
+        opacity: 0;
       }
 
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+      .fade-in-up-delay-2 {
+        animation-delay: 0.2s;
+        opacity: 0;
       }
 
-      .feature-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
+      .fade-in-up-delay-3 {
+        animation-delay: 0.3s;
+        opacity: 0;
       }
 
-      .blue-icon {
-        background: var(--gradient-icon);
-        color: var(--primary-dark);
-      }
-
-      /* Style untuk halaman detail proyek */
-      .project-detail {
-        min-height: 100vh;
-        padding-top: 100px; /* Increased padding to account for fixed navbar */
-      }
-
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        background-color: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-      }
-
-      .back-button {
-        background-color: #fbbf24;
-        color: #000;
-        padding: 8px 16px;
-        border-radius: 8px;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 24px;
-        transition: all 0.3s ease;
-      }
-
-      .back-button:hover {
-        background-color: #f59e0b;
-        transform: translateY(-2px);
-      }
-
-      .project-header {
-        margin-bottom: 32px;
-      }
-
-      .project-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 16px;
-        color: #1e293b;
-      }
-
-      .project-description {
-        background-color: rgba(59, 130, 246, 0.05);
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 32px;
-        border: 1px solid rgba(59, 130, 246, 0.1);
-      }
-
-      .project-technologies {
-        margin-bottom: 32px;
-      }
-
-      .tech-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 16px;
-      }
-
-      .tech-item {
-        background-color: rgba(59, 130, 246, 0.1);
-        border-radius: 8px;
-        padding: 8px 16px;
-        color: #1e293b;
-        font-weight: 500;
-      }
-
-      .project-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-        margin-bottom: 32px;
-      }
-
-      .gallery-item {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
-
-      .gallery-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      .project-videos {
-        margin-bottom: 32px;
-      }
-
-      .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-      }
-
-      .video-item {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
-
-      .video-thumbnail {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-      }
-
-      .video-thumbnail img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .video-play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 64px;
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-      }
-
-      .video-info {
-        padding: 16px;
-        background-color: rgba(59, 130, 246, 0.05);
-        border: 1px solid rgba(59, 130, 246, 0.1);
-      }
-
-      .video-title {
-        font-size: 1.125rem;
-        font-weight: 600;
-        margin-bottom: 8px;
-        color: #1e293b;
-      }
-
-      .video-description {
-        color: #475569;
-        font-size: 0.875rem;
-      }
-
-      .project-footer {
-        text-align: center;
-        padding: 24px 0;
-        border-top: 1px solid rgba(59, 130, 246, 0.1);
-        margin-top: 32px;
-      }
-
-      .contact-info {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin-top: 16px;
-        flex-wrap: wrap;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #475569;
-      }
-
-      /* Mobile Menu Styles */
-      .mobile-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 8px 8px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-      }
-
-      /* Dark mode toggle button */
-      .dark-mode-toggle {
-        background: none;
-        border: none;
-        color: #475569;
-        cursor: pointer;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
-      }
-
-      .dark-mode-toggle:hover {
-        color: var(--primary);
-      }
-
-      body.dark-mode .dark-mode-toggle {
-        color: var(--neutral-200);
-      }
-
-      body.dark-mode .dark-mode-toggle:hover {
-        color: var(--primary-light);
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .project-title {
-          font-size: 2rem;
-        }
-        
-        .project-detail {
-          padding-top: 80px;
-        }
+      .fade-in-up-delay-4 {
+        animation-delay: 0.4s;
+        opacity: 0;
       }
     </style>
   </head>
-  <body class="project-detail">
-    <!-- Navigation -->
-    <nav class="navbar">
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
       <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold font-display gradient-text">FH.</div>
-          <div class="hidden md:flex space-x-8">
-            <a href="index.html" class="nav-link text-neutral-700 hover:text-primary transition-colors">Beranda</a>
-            <a href="index.html#about" class="nav-link text-neutral-700 hover:text-primary transition-colors">Tentang</a>
-            <a href="index.html#skills" class="nav-link text-neutral-700 hover:text-primary transition-colors">Keahlian</a>
-            <a href="index.html#portfolio-main" class="nav-link text-neutral-700 hover:text-primary transition-colors">Portofolio Saya</a>
-            <a href="index.html#experience" class="nav-link text-neutral-700 hover:text-primary transition-colors">Pengalaman</a>
-            <a href="index.html#contact" class="nav-link text-neutral-700 hover:text-primary transition-colors">Kontak</a>
+          <a href="index.html" class="text-2xl font-bold font-display gradient-text no-underline">FH.</a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link">Beranda</a>
+            <a href="index.html#about" class="nav-link">Tentang</a>
+            <a href="index.html#skills" class="nav-link">Keahlian</a>
+            <a href="index.html#portfolio-main" class="nav-link">Portofolio</a>
+            <a href="index.html#experience" class="nav-link">Pengalaman</a>
+            <a href="index.html#contact" class="nav-link">Kontak</a>
           </div>
-          <div class="flex items-center space-x-4">
-            <button id="darkModeToggle" class="dark-mode-toggle">
+
+          <div class="flex items-center gap-2">
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
               <i class="fas fa-moon" id="darkModeIcon"></i>
             </button>
-            <button id="mobileMenuToggle" class="md:hidden p-2">
+            <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors" aria-label="Toggle menu">
               <i class="fas fa-bars text-neutral-700"></i>
             </button>
           </div>
         </div>
+
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu hidden md:hidden mt-4 pb-4">
-          <a href="index.html" class="block py-2 px-4 text-neutral-700 hover:text-primary">Beranda</a>
-          <a href="index.html#about" class="block py-2 px-4 text-neutral-700 hover:text-primary">Tentang</a>
-          <a href="index.html#skills" class="block py-2 px-4 text-neutral-700 hover:text-primary">Keahlian</a>
-          <a href="index.html#portfolio-main" class="block py-2 px-4 text-neutral-700 hover:text-primary">Portofolio Saya</a>
-          <a href="index.html#experience" class="block py-2 px-4 text-neutral-700 hover:text-primary">Pengalaman</a>
-          <a href="index.html#contact" class="block py-2 px-4 text-neutral-700 hover:text-primary">Kontak</a>
+        <div id="mobileMenu" class="mobile-menu">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#about">Tentang</a>
+          <a href="index.html#skills">Keahlian</a>
+          <a href="index.html#portfolio-main">Portofolio</a>
+          <a href="index.html#experience">Pengalaman</a>
+          <a href="index.html#contact">Kontak</a>
         </div>
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mx-auto px-6">
-      <a href="index.html#portfolio-main" class="back-button">
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="container mx-auto px-6 pt-28 pb-16">
+      <!-- Back Button -->
+      <a href="index.html#portfolio-main" class="back-button fade-in-up">
         <i class="fas fa-arrow-left"></i>
-        Back to Projects
+        Kembali ke Portofolio
       </a>
 
-      <div class="project-header">
-        <h1 class="project-title">Bahasa Arab Projects</h1>
+      <!-- Header -->
+      <div class="project-header fade-in-up fade-in-up-delay-1">
+        <div class="flex flex-wrap items-center gap-4 mb-3">
+          <span class="project-badge">
+            <i class="fas fa-language mr-2"></i>
+            Bahasa Arab
+          </span>
+          <span class="text-sm text-neutral-400">•</span>
+          <span class="text-sm text-neutral-500">2025</span>
+        </div>
+        <h1 class="project-title">
+          Belajar <span class="gradient-text">Bahasa Arab</span>
+        </h1>
+        <p class="text-neutral-500 text-lg max-w-2xl">
+          Dokumentasi perjalanan belajar bahasa Arab, dari percakapan sehari-hari hingga pembacaan kitab-kitab klasik.
+        </p>
       </div>
 
-      <div class="project-description">
-        <h2 class="text-2xl font-semibold mb-4">Tentang Bahasa Arab</h2>
-        <p class="mb-4">
-          Bahasa Arab adalah bahasa Al-Quran dan hadis, sehingga mempelajarinya memberikan pemahaman yang lebih mendalam tentang ajaran Islam. Bagi saya, bahasa Arab bukan hanya sekadar bahasa, tetapi kunci untuk membuka pintu-pintu ilmu agama dan memahami sumber-sumber utama Islam secara langsung tanpa perantara.
-        </p>
-        <p class="mb-4">
-          Di Ma'had, saya mendalami bahasa Arab tidak hanya dari sisi keagamaan, tetapi juga sebagai bahasa ilmu pengetahuan. Kemampuan berbahasa Arab membuka akses ke karya-karya klasik dan kontemporer dalam berbagai bidang, mulai dari tafsir, fiqih, hingga sastra Arab.
+      <!-- Description -->
+      <div class="project-description fade-in-up fade-in-up-delay-2">
+        <h2>
+          <i class="fas fa-info-circle"></i>
+          Tentang Bahasa Arab
+        </h2>
+        <p>
+          <strong>Bahasa Arab</strong> adalah bahasa Al-Quran dan hadis, sehingga mempelajarinya memberikan pemahaman 
+          yang lebih mendalam tentang ajaran Islam. Bagi saya, bahasa Arab bukan hanya sekadar bahasa, tetapi 
+          <strong>kunci untuk membuka pintu-pintu ilmu agama</strong> dan memahami sumber-sumber utama Islam secara 
+          langsung tanpa perantara.
         </p>
         <p>
-          Proyek ini menampilkan berbagai presentasi dan pembelajaran bahasa Arab yang telah saya kerjakan, mulai dari percakapan sehari-hari hingga pembacaan kitab-kitab klasik.
+          Di Ma'had, saya mendalami bahasa Arab tidak hanya dari sisi keagamaan, tetapi juga sebagai bahasa ilmu 
+          pengetahuan. Kemampuan berbahasa Arab membuka akses ke karya-karya klasik dan kontemporer dalam berbagai 
+          bidang, mulai dari tafsir, fiqih, hingga sastra Arab.
+        </p>
+        <p>
+          Proyek ini menampilkan berbagai presentasi dan pembelajaran bahasa Arab yang telah saya kerjakan, mulai dari 
+          percakapan sehari-hari hingga pembacaan kitab-kitab klasik.
         </p>
       </div>
 
-      <div class="project-technologies">
-        <h2 class="text-2xl font-semibold mb-4">Materi yang Dipelajari</h2>
+      <!-- Technologies -->
+      <div class="mb-12 fade-in-up fade-in-up-delay-2">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
+          <i class="fas fa-book-open text-primary"></i>
+          Materi yang Dipelajari
+        </h2>
         <div class="tech-list">
-          <div class="tech-item">Nahwu</div>
-          <div class="tech-item">Sharaf</div>
-          <div class="tech-item">Balaghah</div>
-          <div class="tech-item">Muthala'ah</div>
-          <div class="tech-item">Kalam</div>
+          <span class="tech-item"><i class="fas fa-pen-fancy mr-2 text-primary"></i>Nahwu</span>
+          <span class="tech-item"><i class="fas fa-pen-fancy mr-2 text-primary"></i>Sharaf</span>
+          <span class="tech-item"><i class="fas fa-pen-fancy mr-2 text-primary"></i>Balaghah</span>
+          <span class="tech-item"><i class="fas fa-pen-fancy mr-2 text-primary"></i>Muthala'ah</span>
+          <span class="tech-item"><i class="fas fa-pen-fancy mr-2 text-primary"></i>Kalam</span>
+          <span class="tech-item"><i class="fas fa-pen-fancy mr-2 text-primary"></i>Muhadatsah</span>
         </div>
       </div>
 
-      <div class="project-videos">
-        <h2 class="text-2xl font-semibold mb-4">Video Pembelajaran</h2>
-        <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/qAtIqwojrAk"
-            title="Percakapan Bahasa Arab"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-        <div class="mt-4">
-          <h3 class="text-xl font-semibold mb-2">Percakapan Bahasa Arab</h3>
-          <p class="mb-2">Video percakapan saya dalam bahasa Arab tentang perencanaan liburan ketika kami mendapatkan liburan.</p>
-          <div class="flex flex-wrap items-center gap-4 mb-4">
-            <div class="flex items-center space-x-2">
-              <i class="fas fa-calendar text-primary"></i>
-              <span class="text-neutral-700">10 Desember 2025</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <i class="fas fa-map-marker-alt text-primary"></i>
-              <span class="text-neutral-700">Ma'had HSI, Purwerejo</span>
-            </div>
+      <!-- Video Section -->
+      <div class="fade-in-up fade-in-up-delay-3">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
+          <i class="fas fa-video text-primary"></i>
+          Video Pembelajaran
+        </h2>
+
+        <div class="video-card">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/qAtIqwojrAk"
+              title="Percakapan Bahasa Arab"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
           </div>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://youtu.be/qAtIqwojrAk?si=eHWa6PVjc-9wMTT-" target="_blank" class="px-6 py-2 btn-primary text-white rounded-full">
-              <i class="fab fa-youtube mr-2"></i> Lihat di YouTube
+          <div class="video-info">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="video-title">
+                <i class="fab fa-youtube"></i>
+                Percakapan Bahasa Arab
+              </h3>
+              <span class="badge-source badge-youtube">
+                <i class="fab fa-youtube"></i>
+                YouTube
+              </span>
+            </div>
+            <p class="video-description">
+              Video percakapan saya dalam bahasa Arab tentang perencanaan liburan ketika kami mendapatkan liburan 
+              di Ma'had HSI.
+            </p>
+            <div class="video-meta">
+              <span>
+                <i class="fas fa-calendar-alt"></i>
+                10 Desember 2025
+              </span>
+              <span>
+                <i class="fas fa-map-marker-alt"></i>
+                Ma'had HSI, Purwerejo
+              </span>
+              <span>
+                <i class="fas fa-language"></i>
+                Percakapan Sehari-hari
+              </span>
+            </div>
+            <a href="https://youtu.be/qAtIqwojrAk?si=eHWa6PVjc-9wMTT-" target="_blank" class="btn-youtube">
+              <i class="fab fa-youtube"></i>
+              Tonton di YouTube
             </a>
           </div>
         </div>
       </div>
 
-      <div class="project-gallery">
-        <h2 class="text-2xl font-semibold mb-4">Galeri Pembelajaran</h2>
+      <!-- Gallery -->
+      <div class="mt-12 fade-in-up fade-in-up-delay-3">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
+          <i class="fas fa-images text-primary"></i>
+          Galeri Pembelajaran
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="gallery-item">
-            <img src="assets/c46ef452ea61b63685b16cf852c4e9c0.jpg" alt="Arabic Learning 1" />
+            <img src="assets/c46ef452ea61b63685b16cf852c4e9c0.jpg" alt="Arabic Learning 1" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="assets/1fa67c01567e97a014dbf490630f7f2e.jpg" alt="Arabic Learning 2" />
+            <img src="assets/1fa67c01567e97a014dbf490630f7f2e.jpg" alt="Arabic Learning 2" loading="lazy" />
           </div>
         </div>
       </div>
 
-      <div class="project-footer">
-        <h2 class="text-2xl font-semibold mb-4">Hubungi Saya</h2>
-        <p class="mb-4">Jika Anda tertarik dengan proyek ini atau ingin berkolaborasi, jangan ragu untuk menghubungi saya.</p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>fazinhanzala@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>+62 831 6104 2458</span>
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 fade-in-up fade-in-up-delay-4">
+        <div class="stat-box">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Materi Dipelajari</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Video</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">2025</div>
+          <div class="stat-label">Tahun</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">✓</div>
+          <div class="stat-label">Selesai</div>
+        </div>
+      </div>
+
+      <!-- Footer / Contact -->
+      <div class="bg-white dark:bg-neutral-800 rounded-2xl p-8 mt-12 border border-neutral-200 dark:border-neutral-700 shadow-sm fade-in-up fade-in-up-delay-4">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold mb-3 flex items-center justify-center gap-3">
+            <i class="fas fa-handshake text-primary"></i>
+            Tertarik dengan Proyek Ini?
+          </h2>
+          <p class="text-neutral-500 dark:text-neutral-400 mb-6 max-w-md mx-auto">
+            Saya terbuka untuk kolaborasi dan proyek baru. Jangan ragu untuk menghubungi saya!
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="mailto:fazinhanzala@gmail.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              fazinhanzala@gmail.com
+            </a>
+            <a href="tel:+6283161042458" class="contact-item">
+              <i class="fas fa-phone"></i>
+              +62 831 6104 2458
+            </a>
+            <a href="https://github.com/" target="_blank" class="contact-item">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+            <a href="https://www.instagram.com/accounts/onetap/?next=%2F" target="_blank" class="contact-item">
+              <i class="fab fa-instagram"></i>
+              Instagram
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <script>
-      // Mobile Menu Toggle
-      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-
-      mobileMenuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      // Dark Mode Toggle
+      // ===== DARK MODE =====
       const darkModeToggle = document.getElementById('darkModeToggle');
       const darkModeIcon = document.getElementById('darkModeIcon');
       const body = document.body;
 
-      // Check for saved dark mode preference or default to light mode
       const currentTheme = localStorage.getItem('theme') || 'light';
       if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -805,7 +922,6 @@
 
       darkModeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
-        
         if (body.classList.contains('dark-mode')) {
           darkModeIcon.classList.replace('fa-moon', 'fa-sun');
           localStorage.setItem('theme', 'dark');
@@ -815,36 +931,34 @@
         }
       });
 
-      // Smooth Scroll for Navigation Links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-            });
-            // Close mobile menu if open
-            mobileMenu.classList.add('hidden');
-          }
+      // ===== MOBILE MENU =====
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
         });
       });
 
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', (event) => {
-        if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
-          mobileMenu.classList.add('hidden');
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          mobileMenu.classList.remove('open');
         }
       });
 
-      // Navbar scroll effect
+      // ===== NAVBAR SCROLL =====
+      const navbar = document.getElementById('navbar');
+
       window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-          navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+        if (window.scrollY > 30) {
+          navbar.classList.add('scrolled');
         } else {
-          navbar.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1)';
+          navbar.classList.remove('scrolled');
         }
       });
     </script>

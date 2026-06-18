@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasmi' Project - Fazin Hanzala</title>
+    <title>Kitab Mulazzamah - Fazin Hanzala</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
@@ -144,20 +144,16 @@
         color: #94a3b8;
       }
 
-      body.dark-mode .video-card {
+      body.dark-mode .kitab-card {
         background: #1e293b;
         border-color: #334155;
       }
 
-      body.dark-mode .video-card .video-title {
+      body.dark-mode .kitab-card .kitab-title {
         color: #e2e8f0;
       }
 
-      body.dark-mode .video-card .video-meta {
-        color: #94a3b8;
-      }
-
-      body.dark-mode .video-card .video-description {
+      body.dark-mode .kitab-card .kitab-desc {
         color: #94a3b8;
       }
 
@@ -204,14 +200,27 @@
         color: #94a3b8;
       }
 
-      body.dark-mode .drive-badge {
-        background: #1a3a5a;
+      body.dark-mode .badge-drive {
+        background: #1a2a4a;
         color: #60a5fa;
       }
 
-      body.dark-mode .youtube-badge {
-        background: #3a1a1a;
-        color: #ef4444;
+      body.dark-mode .badge-docs {
+        background: #1a2a3a;
+        color: #60a5fa;
+      }
+
+      body.dark-mode .video-item {
+        background: #0f172a;
+        border-color: #334155;
+      }
+
+      body.dark-mode .video-item .video-label {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .kitab-cover {
+        border-color: #334155;
       }
 
       /* ===== BACK BUTTON ===== */
@@ -297,160 +306,169 @@
         margin-bottom: 12px;
       }
 
-      /* ===== VIDEO GRID ===== */
-      .video-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        margin-top: 16px;
-      }
-
-      @media (max-width: 768px) {
-        .video-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-      }
-
-      /* ===== VIDEO CARD ===== */
-      .video-card {
+      /* ===== KITAB CARD ===== */
+      .kitab-card {
         background: white;
         border-radius: 16px;
-        overflow: hidden;
         border: 1px solid #e2e8f0;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         transition: all 0.3s ease;
-        max-width: 100%;
+        overflow: hidden;
       }
 
-      .video-card:hover {
+      .kitab-card:hover {
         box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
         border-color: #93c5fd;
         transform: translateY(-4px);
       }
 
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        background: #0f172a;
-      }
-
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-      .video-info {
+      .kitab-header {
         padding: 20px 24px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+        border-bottom: 1px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
       }
 
-      .video-title {
-        font-size: 1.1rem;
+      .kitab-title {
+        font-size: 1.3rem;
         font-weight: 700;
-        margin-bottom: 6px;
         color: #1e293b;
         display: flex;
         align-items: center;
         gap: 10px;
       }
 
-      .video-title i {
-        font-size: 1rem;
-      }
-
-      .video-title .youtube-icon {
-        color: #ef4444;
-      }
-
-      .video-title .drive-icon {
-        color: #fbbc04;
-      }
-
-      .video-description {
-        color: #475569;
-        font-size: 0.9rem;
-        line-height: 1.6;
-        margin-bottom: 12px;
-      }
-
-      .video-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-bottom: 12px;
-        color: #64748b;
-        font-size: 0.85rem;
-      }
-
-      .video-meta i {
+      .kitab-title i {
         color: var(--primary);
-        width: 16px;
-        font-size: 0.85rem;
+        font-size: 1.2rem;
       }
 
-      .video-meta span {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
+      .kitab-body {
+        padding: 20px 24px;
       }
 
-      .btn-watch {
-        display: inline-flex;
+      .kitab-desc {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      /* ===== KITAB COVER ===== */
+      .kitab-cover-wrapper {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+
+      .kitab-cover {
+        width: 120px;
+        height: 160px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        flex-shrink: 0;
+        background: #f1f5f9;
+        display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 8px 18px;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 0.85rem;
+        justify-content: center;
+      }
+
+      .kitab-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .kitab-cover-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: #94a3b8;
+        background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+      }
+
+      .kitab-info-wrapper {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      /* ===== VIDEO LIST ===== */
+      .video-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .video-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 16px;
+        background: #f8fafc;
+        border-radius: 10px;
+        border: 1px solid #e2e8f0;
         transition: all 0.3s ease;
         text-decoration: none;
-        border: none;
-        cursor: pointer;
+        color: #1e293b;
       }
 
-      .btn-youtube {
-        background: #dc2626;
-        color: white;
+      .video-item:hover {
+        background: rgba(59, 130, 246, 0.06);
+        border-color: #93c5fd;
+        transform: translateX(4px);
       }
 
-      .btn-youtube:hover {
-        background: #b91c1c;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
-      }
-
-      .btn-drive {
-        background: #1a73e8;
-        color: white;
-      }
-
-      .btn-drive:hover {
-        background: #1557b0;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(26, 115, 232, 0.3);
-      }
-
-      .badge-source {
-        display: inline-flex;
+      .video-item .video-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(59, 130, 246, 0.1);
+        display: flex;
         align-items: center;
-        gap: 4px;
-        font-size: 0.7rem;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--primary);
+        font-size: 1.1rem;
+      }
+
+      .video-item .video-info {
+        flex: 1;
+        padding: 0;
+        background: none;
+        border: none;
+      }
+
+      .video-item .video-label {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #1e293b;
+      }
+
+      .video-item .video-sub {
+        font-size: 0.8rem;
+        color: #64748b;
+      }
+
+      .video-item .video-badge {
+        font-size: 0.65rem;
         font-weight: 600;
         padding: 2px 10px;
         border-radius: 12px;
+        background: #e8f0fe;
+        color: #1a73e8;
         text-transform: uppercase;
         letter-spacing: 0.03em;
-      }
-
-      .badge-youtube {
-        background: #fef2f2;
-        color: #dc2626;
       }
 
       .badge-drive {
@@ -458,14 +476,49 @@
         color: #1a73e8;
       }
 
-      body.dark-mode .badge-youtube {
-        background: #3a1a1a;
-        color: #ef4444;
+      /* ===== DOCS BUTTON ===== */
+      .btn-docs {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #1a73e8;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
       }
 
-      body.dark-mode .badge-drive {
-        background: #1a2a4a;
-        color: #60a5fa;
+      .btn-docs:hover {
+        background: #1557b0;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(26, 115, 232, 0.3);
+      }
+
+      .docs-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-top: 16px;
+        border-top: 1px solid #e2e8f0;
+        flex-wrap: wrap;
+      }
+
+      .docs-label {
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .docs-label i {
+        color: #1a73e8;
       }
 
       /* ===== STATS ===== */
@@ -588,17 +641,29 @@
           font-size: 2rem;
         }
 
-        .video-info {
+        .kitab-header {
           padding: 16px 18px;
         }
 
-        .video-title {
-          font-size: 1rem;
+        .kitab-body {
+          padding: 16px 18px;
         }
 
-        .video-meta {
-          font-size: 0.8rem;
-          gap: 10px;
+        .kitab-title {
+          font-size: 1.1rem;
+        }
+
+        .kitab-cover {
+          width: 90px;
+          height: 120px;
+        }
+
+        .video-item {
+          padding: 10px 14px;
+        }
+
+        .video-item .video-label {
+          font-size: 0.85rem;
         }
 
         .back-button {
@@ -620,17 +685,35 @@
           padding: 16px;
         }
 
-        .video-info {
-          padding: 14px 16px;
+        .kitab-header {
+          padding: 14px 14px;
         }
 
-        .video-title {
-          font-size: 0.95rem;
+        .kitab-body {
+          padding: 14px 14px;
         }
 
-        .btn-watch {
-          font-size: 0.8rem;
-          padding: 6px 14px;
+        .kitab-cover {
+          width: 70px;
+          height: 95px;
+        }
+
+        .kitab-cover-wrapper {
+          gap: 12px;
+        }
+
+        .video-item {
+          padding: 8px 12px;
+          flex-wrap: wrap;
+        }
+
+        .video-item .video-badge {
+          font-size: 0.55rem;
+        }
+
+        .docs-section {
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
 
@@ -721,17 +804,17 @@
       <div class="project-header fade-in-up fade-in-up-delay-1">
         <div class="flex flex-wrap items-center gap-4 mb-3">
           <span class="project-badge">
-            <i class="fas fa-book-quran mr-2"></i>
-            Tahfidz & Tasmi'
+            <i class="fas fa-book mr-2"></i>
+            Kitab Mulazzamah
           </span>
           <span class="text-sm text-neutral-400">•</span>
           <span class="text-sm text-neutral-500">2025 - 2026</span>
         </div>
         <h1 class="project-title">
-          Tasmi' <span class="gradient-text">Al-Quran</span>
+          Kitab <span class="gradient-text">Mulazzamah</span>
         </h1>
         <p class="text-neutral-500 text-lg max-w-2xl">
-          Proyek hafalan Juz 29 & 30 yang disetorkan di SMA IT HSI Boarding School dengan tajwid yang benar.
+          Dokumentasi pembelajaran 3 kitab dengan video penjelasan dan portofolio dokumen.
         </p>
       </div>
 
@@ -739,108 +822,271 @@
       <div class="project-description fade-in-up fade-in-up-delay-2">
         <h2>
           <i class="fas fa-info-circle"></i>
-          Tentang Proyek
+          Tentang Kitab Mulazzamah
         </h2>
         <p>
-          <strong>Tasmi' Project</strong> adalah proyek hafalan Juz 29 dan 30 yang saya setorkan di SMA IT HSI Boarding School. 
-          Proyek ini bertujuan untuk membantu siswa dalam membaca Al-Quran dengan benar dan sesuai dengan kaidah tajwid yang tepat.
+          <strong>Kitab Mulazzamah</strong> adalah program pembelajaran yang mencakup 3 kitab utama yang dipelajari 
+          di Ma'had HSI. Setiap kitab memiliki 3 video penjelasan  dan 1 portofolio dokumen 
+          .
         </p>
         <p>
-          Melalui proyek ini, saya berkesempatan untuk dapat menyetorkan hafalan saya dengan didampingi oleh 
-          ustadz/ustadzah yang membimbing dalam membaca Al-Quran dengan tajwid yang benar.
+          Program ini bertujuan untuk mendokumentasikan perjalanan pembelajaran kitab-kitab klasik yang menjadi 
+          fondasi dalam memahami ilmu agama Islam secara mendalam.
         </p>
       </div>
 
-      <!-- Video Section -->
-      <div class="fade-in-up fade-in-up-delay-3">
+      <!-- ===== KITAB 1 ===== -->
+      <div class="fade-in-up fade-in-up-delay-2 mb-8">
         <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
-          <i class="fas fa-video text-primary"></i>
-          Video Presentasi
+          <i class="fas fa-book-open text-primary"></i>
+          Kitab 1
         </h2>
 
-        <div class="video-grid">
-          <!-- Video 1: Juz 30 (YouTube) -->
-          <div class="video-card">
-            <div class="video-container">
-              <iframe
-                src="https://www.youtube.com/embed/J74mLXWFNzM"
-                title="Tasmi' Juz 30"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              >
-              </iframe>
+        <div class="kitab-card">
+          <div class="kitab-header">
+            <h3 class="kitab-title">
+              <i class="fas fa-book"></i>
+              Kitab Aqidatuna
+            </h3>
+            <span class="text-sm text-neutral-500">3 Video • 1 Dokumen</span>
+          </div>
+          <div class="kitab-body">
+            <!-- Cover + Deskripsi -->
+            <div class="kitab-cover-wrapper">
+              <div class="kitab-cover">
+                <img src="assets/aqidatuna.jpg" alt="Cover Kitab Aqidatuna" />
+              </div>
+              <div class="kitab-info-wrapper">
+                <p class="kitab-desc">
+                  Kitab dasar dalam Aqidah yang membahas tentang seputar Aqidah. Materi mencakup 
+                  pengenalan Aqidah, tuhanmu, nabimu, agamamu dan dasar-dasar Aqidah.
+                </p>
+              </div>
             </div>
-            <div class="video-info">
-              <div class="flex items-center justify-between mb-1">
-                <h3 class="video-title">
-                  <i class="fab fa-youtube youtube-icon"></i>
-                  Tasmi' Juz 30
-                </h3>
-                <span class="badge-source badge-youtube">
-                  <i class="fab fa-youtube"></i>
-                  YouTube
+
+            <!-- Video List -->
+            <div class="video-list">
+              <a href="https://drive.google.com/file/d/1N5b5nuPUqrKQkxFiOqRovIg_WDxUcHbz/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 1 - Aqidatuna</div>
+                  <div class="video-sub">Marhalah 1</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
                 </span>
-              </div>
-              <p class="video-description">
-                Video presentasi hafalan Juz 30 dengan tajwid yang benar. Disetorkan di hadapan ustadz/ustadzah.
-              </p>
-              <div class="video-meta">
-                <span>
-                  <i class="fas fa-calendar-alt"></i>
-                  15 Des 2025
+              </a>
+
+              <a href="https://drive.google.com/file/d/18g87RBfXnhA3OOH_4gerXg2S-8EkFk2e/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 2 - Aqidatuna</div>
+                  <div class="video-sub">Marhalah 2</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
                 </span>
-                <span>
-                  <i class="fas fa-map-marker-alt"></i>
-                  HSI Boarding School
+              </a>
+
+              <a href="https://drive.google.com/file/d/1tdHLeVltdavAaDeVpySZV346Z-QfCWWr/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 3 - Aqidatuna</div>
+                  <div class="video-sub">Marhalah 3</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
                 </span>
-              </div>
-              <a href="https://youtu.be/J74mLXWFNzM?si=isa9ML6w7T4yWYYM" target="_blank" class="btn-watch btn-youtube">
-                <i class="fab fa-youtube"></i>
-                Tonton di YouTube
+              </a>
+            </div>
+
+            <!-- Docs -->
+            <div class="docs-section">
+              <span class="docs-label">
+                <i class="fas fa-file-alt"></i>
+                Portofolio Dokumen:
+              </span>
+              <a href="https://docs.google.com/document/d/10c4GZGl5LKPOvJZKOCYMkPnuzBy3KNGG/edit" target="_blank" class="btn-docs">
+                <i class="fas fa-external-link-alt"></i>
+                Buka di Google Docs
               </a>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Video 2: Juz 29 (Google Drive) -->
-          <div class="video-card">
-            <div class="video-container">
-              <iframe
-                src="https://drive.google.com/file/d/1IHNtJIfuBvPH8eSyFrTVXeWhfDehEMWj/view?usp=drive_link"
-                title="Tasmi' Juz 29"
-                allow="autoplay"
-                allowfullscreen
-                loading="lazy"
-              >
-              </iframe>
+      <!-- ===== KITAB 2 ===== -->
+      <div class="fade-in-up fade-in-up-delay-3 mb-8">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
+          <i class="fas fa-book-open text-primary"></i>
+          Kitab 2
+        </h2>
+
+        <div class="kitab-card">
+          <div class="kitab-header">
+            <h3 class="kitab-title">
+              <i class="fas fa-book"></i>
+              Kitab Fathul Ali
+            </h3>
+            <span class="text-sm text-neutral-500">3 Video • 1 Dokumen</span>
+          </div>
+          <div class="kitab-body">
+            <!-- Cover + Deskripsi -->
+            <div class="kitab-cover-wrapper">
+              <div class="kitab-cover">
+                <img src="assets/fathulali.jpg" alt="Cover Kitab Fathul Ali" />
+              </div>
+              <div class="kitab-info-wrapper">
+                <p class="kitab-desc">
+                  Kitab yang membahas tentang ilmu fiqih dengan Metode pertanyaan dan jawaban. 
+                  Materi mencakup pembahasan tentang fiqih ibadah seperti kitab Thaharah, sholat, zakat, puasa, hajji.
+                </p>
+              </div>
             </div>
-            <div class="video-info">
-              <div class="flex items-center justify-between mb-1">
-                <h3 class="video-title">
-                  <i class="fas fa-cloud drive-icon"></i>
-                  Tasmi' Juz 29
-                </h3>
-                <span class="badge-source badge-drive">
-                  <i class="fas fa-cloud"></i>
-                  Google Drive
+
+            <!-- Video List -->
+            <div class="video-list">
+              <a href="https://drive.google.com/file/d/1V1AEE3_0aIFPj4Z-TbNKULmkG2EP10WZ/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 1 - Fathul Ali</div>
+                  <div class="video-sub">Marhalah 1</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
                 </span>
-              </div>
-              <p class="video-description">
-                Video presentasi hafalan Juz 29 dengan tajwid yang benar. Disetorkan di hadapan ustadz.
-              </p>
-              <div class="video-meta">
-                <span>
-                  <i class="fas fa-calendar-alt"></i>
-                  10 Des 2025
+              </a>
+
+              <a href="https://drive.google.com/file/d/1RirPdVsNiapxlZXqnYLKHXf4-IdXLxjO/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 2 - Fathul Ali</div>
+                  <div class="video-sub">Marhalah 2</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
                 </span>
-                <span>
-                  <i class="fas fa-map-marker-alt"></i>
-                  HSI Boarding School
+              </a>
+
+              <a href="https://drive.google.com/file/d/1q886EIup_GwKUFMUqzIl7vvlRR0nyj5B/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 3 - Fathul Ali</div>
+                  <div class="video-sub">Marhalah 3</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
                 </span>
-              </div>
-              <a href="https://drive.google.com/file/d/1IHNtJIfuBvPH8eSyFrTVXeWhfDehEMWj/view?usp=drive_link" target="_blank" class="btn-watch btn-drive">
+              </a>
+            </div>
+
+            <!-- Docs -->
+            <div class="docs-section">
+              <span class="docs-label">
+                <i class="fas fa-file-alt"></i>
+                Portofolio Dokumen:
+              </span>
+              <a href="https://docs.google.com/document/d/1e67eqQxZCJH7K4SqNAJEB49wQURWGj_R/edit" target="_blank" class="btn-docs">
                 <i class="fas fa-external-link-alt"></i>
-                Buka di Google Drive
+                Buka di Google Docs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== KITAB 3 ===== -->
+      <div class="fade-in-up fade-in-up-delay-4 mb-12">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-3">
+          <i class="fas fa-book-open text-primary"></i>
+          Kitab 3
+        </h2>
+
+        <div class="kitab-card">
+          <div class="kitab-header">
+            <h3 class="kitab-title">
+              <i class="fas fa-book"></i>
+              Kitab Nabiyyuna
+            </h3>
+            <span class="text-sm text-neutral-500">3 Video • 1 Dokumen</span>
+          </div>
+          <div class="kitab-body">
+            <!-- Cover + Deskripsi -->
+            <div class="kitab-cover-wrapper">
+              <div class="kitab-cover">
+                <img src="assets/nabiyyuna.jpg" alt="Cover Kitab Nabiyyuna" />
+              </div>
+              <div class="kitab-info-wrapper">
+                <p class="kitab-desc">
+                  Kitab yang membahas tentang sirah nabawiyyah, perjalanan hidup Nabi Muhammad SAW 
+                  dari kelahiran hingga wafat, serta pelajaran-pelajaran yang dapat diambil dari kehidupan beliau.
+                </p>
+              </div>
+            </div>
+
+            <!-- Video List -->
+            <div class="video-list">
+              <a href="https://drive.google.com/file/d/10PC4PAYga_DDjlADJSR5s0ADvR-3cSdr/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 1 - Nabiyyuna</div>
+                  <div class="video-sub">Marhalah 1</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
+                </span>
+              </a>
+
+              <a href="https://drive.google.com/file/d/1o1GZ9mpM8nKE9kIM4uHiRtumIcB3jNe5/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 2 - Nabiyyuna</div>
+                  <div class="video-sub">Marhalah 2</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
+                </span>
+              </a>
+
+              <a href="https://drive.google.com/file/d/1p4KuXElE7ZqS35fIAlQDnsg06PuplIev/view?usp=drive_link" target="_blank" class="video-item">
+                <div class="video-icon">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="video-info">
+                  <div class="video-label">Video 3 - Nabiyyuna</div>
+                  <div class="video-sub">Marhalah 3</div>
+                </div>
+                <span class="video-badge badge-drive">
+                  <i class="fas fa-cloud"></i> Drive
+                </span>
+              </a>
+            </div>
+
+            <!-- Docs -->
+            <div class="docs-section">
+              <span class="docs-label">
+                <i class="fas fa-file-alt"></i>
+                Portofolio Dokumen:
+              </span>
+              <a href="https://docs.google.com/document/d/1aQYM6sRo6rbSpusq2hIK7rsfCVgVuRCK/edit" target="_blank" class="btn-docs">
+                <i class="fas fa-external-link-alt"></i>
+                Buka di Google Docs
               </a>
             </div>
           </div>
@@ -850,16 +1096,16 @@
       <!-- Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 fade-in-up fade-in-up-delay-4">
         <div class="stat-box">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Juz Disetorkan</div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Kitab</div>
         </div>
         <div class="stat-box">
-          <div class="stat-number">60</div>
-          <div class="stat-label">Halaman</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number">2</div>
+          <div class="stat-number">9</div>
           <div class="stat-label">Video</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Dokumen</div>
         </div>
         <div class="stat-box">
           <div class="stat-number">2025</div>
