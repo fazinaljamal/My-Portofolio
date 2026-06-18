@@ -205,15 +205,22 @@
         color: #94a3b8;
       }
 
-      body.dark-mode .btn-live {
+      body.dark-mode .task-card {
         background: #1e293b;
-        color: #60a5fa;
         border-color: #334155;
       }
 
-      body.dark-mode .btn-live:hover {
-        background: #334155;
-        color: #93c5fd;
+      body.dark-mode .task-card .task-title {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .task-card .task-desc {
+        color: #94a3b8;
+      }
+
+      body.dark-mode .footer-contact {
+        background: #1e293b;
+        border-color: #334155;
       }
 
       /* ===== BACK BUTTON ===== */
@@ -354,46 +361,144 @@
         transform: scale(1.03);
       }
 
-      /* ===== LIVE DEMO BUTTON ===== */
-      .btn-live {
+      /* ===== TASK CARD (Tugas SKL) ===== */
+      .task-card {
+        background: white;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        margin-bottom: 40px;
+      }
+
+      .task-card:hover {
+        box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+        border-color: #93c5fd;
+        transform: translateY(-4px);
+      }
+
+      .task-header {
+        padding: 20px 24px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+        border-bottom: 1px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .task-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1e293b;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .task-title i {
+        color: var(--primary);
+        font-size: 1.2rem;
+      }
+
+      .task-body {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .task-cover-wrapper {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .task-cover {
+        width: 200px;
+        height: 140px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        flex-shrink: 0;
+        background: #f1f5f9;
+        transition: all 0.3s ease;
+      }
+
+      .task-cover:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+      }
+
+      .task-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .task-info {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .task-info .task-desc {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+
+      .task-info .task-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        color: #64748b;
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+      }
+
+      .task-info .task-meta i {
+        color: var(--primary);
+        width: 18px;
+      }
+
+      .task-info .task-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .btn-task {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: white;
-        color: var(--primary);
-        padding: 12px 28px;
-        border-radius: 12px;
+        background: var(--gradient-accent);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 10px;
         font-weight: 600;
-        font-size: 0.95rem;
-        border: 2px solid var(--primary);
+        font-size: 0.9rem;
         transition: all 0.3s ease;
         text-decoration: none;
+        border: none;
         cursor: pointer;
       }
 
-      .btn-live:hover {
-        background: var(--primary);
-        color: white;
+      .btn-task:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
       }
 
-      .btn-live i {
-        font-size: 1rem;
+      body.dark-mode .task-cover {
+        border-color: #334155;
       }
 
-      .live-demo-section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-        padding-top: 16px;
-        border-top: 1px solid #e2e8f0;
-      }
-
-      body.dark-mode .live-demo-section {
-        border-top-color: #334155;
+      body.dark-mode .task-header {
+        border-bottom-color: #334155;
       }
 
       /* ===== STATS ===== */
@@ -523,9 +628,25 @@
           font-size: 0.85rem;
         }
 
-        .btn-live {
-          padding: 10px 20px;
-          font-size: 0.85rem;
+        .task-cover {
+          width: 100%;
+          height: 180px;
+        }
+
+        .task-header {
+          padding: 16px 18px;
+        }
+
+        .task-body {
+          padding: 16px 18px;
+        }
+
+        .task-title {
+          font-size: 1.1rem;
+        }
+
+        .task-cover-wrapper {
+          flex-direction: column;
         }
       }
 
@@ -547,9 +668,13 @@
           padding: 6px 14px;
         }
 
-        .live-demo-section {
-          flex-direction: column;
-          align-items: flex-start;
+        .task-cover {
+          height: 150px;
+        }
+
+        .task-info .task-meta {
+          font-size: 0.8rem;
+          gap: 12px;
         }
       }
 
@@ -639,7 +764,7 @@
             Web Development
           </span>
           <span class="text-sm text-neutral-400">•</span>
-          <span class="text-sm text-neutral-500">2025</span>
+          <span class="text-sm text-neutral-500">2025 - 2026</span>
         </div>
         <h1 class="project-title">
           IT Project
@@ -669,17 +794,48 @@
           untuk menciptakan solusi yang profesional dan efisien. Website ini sepenuhnya <strong>responsif</strong> 
           dan dioptimalkan untuk performa yang cepat.
         </p>
+      </div>
 
-        <!-- Live Demo Button -->
-        <div class="live-demo-section">
-          <a href=" fazinhanzala.pythonanywhere.com" target="_blank" class="btn-live">
-            <i class="fas fa-globe"></i>
-            Lihat Demo Online
-          </a>
-          <span class="text-sm text-neutral-500">
-            <i class="fas fa-external-link-alt mr-1"></i>
-            Buka di tab baru
-          </span>
+      <!-- ===== TUGAS SKL CARD ===== -->
+      <div class="task-card fade-in-up fade-in-up-delay-2">
+        <div class="task-header">
+          <h3 class="task-title">
+            <i class="fas fa-tasks"></i>
+            Tugas SKL
+          </h3>
+          <span class="text-sm text-neutral-500">Sekolah • 2025</span>
+        </div>
+        <div class="task-body">
+          <div class="task-cover-wrapper">
+            <div class="task-cover">
+              <img src="assets/skl.png" alt="Tugas SKL" loading="lazy" />
+            </div>
+            <div class="task-info">
+              <p class="task-desc">
+                Tugas Sekolah (SKL) yang dibuat sebagai bagian dari proyek pengembangan website 
+                perpustakaan berbasis Django. Tugas ini mencakup implementasi sistem CRUD 
+                dengan database menggunakan raw SQL.
+              </p>
+              <div class="task-meta">
+                <span>
+                  <i class="fas fa-calendar-alt"></i>
+                  12 Januari 2025
+                </span>
+                <span>
+                  <i class="fas fa-user-graduate"></i>
+                  SMA IT HSI Boarding School
+                </span>
+                <span>
+                  <i class="fas fa-code"></i>
+                  Django + Raw SQL
+                </span>
+              </div>
+              <a href="https://fazinhanzala.pythonanywhere.com" target="_blank" class="btn-task">
+                <i class="fas fa-external-link-alt"></i>
+                Lihat Tugas Online
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -705,9 +861,6 @@
           Galeri Proyek
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="gallery-item">
-            <img src="assets/Screenshot 2025-12-23 140639.png" alt="IT Project Screenshot 1" loading="lazy" />
-          </div>
           <div class="gallery-item">
             <img src="assets/Screenshot 2025-12-19 133651.png" alt="IT Project Screenshot 2" loading="lazy" />
           </div>
@@ -735,7 +888,7 @@
       </div>
 
       <!-- Footer / Contact -->
-      <div class="bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700 shadow-sm fade-in-up fade-in-up-delay-3">
+      <div class="footer-contact bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700 shadow-sm fade-in-up fade-in-up-delay-3">
         <div class="text-center">
           <h2 class="text-2xl font-bold mb-3 flex items-center justify-center gap-3">
             <i class="fas fa-handshake text-primary"></i>
