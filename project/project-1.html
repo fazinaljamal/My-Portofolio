@@ -725,6 +725,7 @@
             <a href="../index.html#experience" class="nav-link">Experience</a>
             <a href="../index.html#contact" class="nav-link">Contact</a>
           </div>
+    
 
           <div class="flex items-center gap-2">
             <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
@@ -735,6 +736,17 @@
             </button>
           </div>
         </div>
+
+        <div id="mobileMenu" class="mobile-menu md:hidden absolute top-full left-0 right-0 px-6 pb-4">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#portfolio-main">Portfolio</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+        
 
        
     <!-- ===== MAIN CONTENT ===== -->
@@ -842,7 +854,7 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="gallery-item">
-            <img src="assets/Screenshot 2025-12-19 133651.png" alt="IT Project Screenshot 2" loading="lazy" />
+            <img src="assets/wpu.png" alt="IT Project Screenshot 2" loading="lazy" />
           </div>
         </div>
       </div>
@@ -899,9 +911,11 @@
       </div>
     </div>
 
+
     <script>
       // ===== DARK MODE =====
       const darkModeToggle = document.getElementById('darkModeToggle');
+      
       const darkModeIcon = document.getElementById('darkModeIcon');
       const body = document.body;
 
@@ -924,8 +938,7 @@
 
       // ===== MOBILE MENU =====
       const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-
+    
       mobileMenuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('open');
       });
