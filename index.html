@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +6,13 @@
     <title>Portfolio - Fazin Hanzala</title>
     <link rel="icon" type="image/jpg" href="assets/logo hsi.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap");
 
       :root {
         --primary: #3b82f6;
@@ -34,12 +37,40 @@
         --neutral-800: #1e293b;
         --neutral-900: #0f172a;
 
-        --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-lighter) 100%);
-        --gradient-name: linear-gradient(135deg, #000000 0%, #1e3a8a 30%, #3b82f6 60%, #60a5fa 100%);
-        --gradient-hero: linear-gradient(135deg, #ffffff 0%, var(--neutral-50) 50%, var(--neutral-100) 100%);
-        --gradient-accent: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-        --gradient-neutral: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
-        --gradient-icon: linear-gradient(135deg, var(--primary-lightest) 0%, var(--primary-lighter) 100%);
+        --gradient-primary: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-light) 50%,
+          var(--primary-lighter) 100%
+        );
+        --gradient-name: linear-gradient(
+          135deg,
+          #000000 0%,
+          #1e3a8a 30%,
+          #3b82f6 60%,
+          #60a5fa 100%
+        );
+        --gradient-hero: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          var(--neutral-50) 50%,
+          var(--neutral-100) 100%
+        );
+        --gradient-accent: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-light) 100%
+        );
+        --gradient-neutral: linear-gradient(
+          135deg,
+          var(--neutral-50) 0%,
+          var(--neutral-100) 100%
+        );
+        --gradient-icon: linear-gradient(
+          135deg,
+          var(--primary-lightest) 0%,
+          var(--primary-lighter) 100%
+        );
       }
 
       html {
@@ -47,13 +78,15 @@
       }
 
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         background-color: var(--neutral-50);
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
       }
 
       .font-display {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
       }
 
       .gradient-text {
@@ -115,7 +148,9 @@
         overflow: hidden;
         border-right: 0.15em solid var(--primary-light);
         white-space: nowrap;
-        animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        animation:
+          typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
       }
 
       @keyframes typing {
@@ -208,7 +243,9 @@
       body.dark-mode .shadow-lg,
       body.dark-mode .shadow-xl,
       body.dark-mode .shadow-2xl {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.4),
+          0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
       }
 
       /* Border di dark mode */
@@ -232,7 +269,12 @@
 
       /* Hero section di dark mode */
       body.dark-mode .hero-gradient {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%) !important;
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e293b 50%,
+          #020617 100%
+        ) !important;
       }
 
       body.dark-mode .hero-gradient .text-neutral-900 {
@@ -339,7 +381,7 @@
       }
 
       .timeline-dot::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 20px;
         height: 20px;
@@ -354,7 +396,7 @@
       }
 
       .active-nav::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -4px;
         left: 0;
@@ -369,7 +411,7 @@
       }
 
       .nav-link::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -2px;
         left: 0;
@@ -389,7 +431,7 @@
       }
 
       .section-title::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 50%;
@@ -450,13 +492,17 @@
       .feature-card {
         background: white;
         border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
+        box-shadow:
+          0 4px 6px -1px rgba(59, 130, 246, 0.1),
+          0 2px 4px -1px rgba(59, 130, 246, 0.06);
         transition: all 0.3s ease;
       }
 
       .feature-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+        box-shadow:
+          0 20px 25px -5px rgba(59, 130, 246, 0.1),
+          0 10px 10px -5px rgba(59, 130, 246, 0.04);
       }
 
       .feature-icon {
@@ -478,7 +524,9 @@
         position: relative;
         overflow: hidden;
         border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
+        box-shadow:
+          0 4px 6px -1px rgba(59, 130, 246, 0.1),
+          0 2px 4px -1px rgba(59, 130, 246, 0.06);
         transition: all 0.3s ease;
         transform: none !important;
         aspect-ratio: 2 / 3;
@@ -509,7 +557,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(96, 165, 250, 0.95) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.95) 0%,
+          rgba(96, 165, 250, 0.95) 100%
+        );
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -555,20 +607,54 @@
   </head>
   <body class="bg-neutral-50">
     <!-- Navigation -->
-    <nav id="navbar" class="w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300 sticky top-0">
+    <nav
+      id="navbar"
+      class="w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300 sticky top-0"
+    >
       <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold font-display gradient-text">FH.</div>
+          <img
+            src="assets/logop.jpg"
+            alt="foto"
+            class="w-12 h-12 rounded-full object-cover"
+          />
           <div class="hidden md:flex space-x-8">
-            <a href="#home" class="nav-link text-neutral-700 hover:text-primary transition-colors">Home</a>
-            <a href="#about" class="nav-link text-neutral-700 hover:text-primary transition-colors">About</a>
-            <a href="#skills" class="nav-link text-neutral-700 hover:text-primary transition-colors">Skills</a>
-            <a href="#portfolio-main" class="nav-link text-neutral-700 hover:text-primary transition-colors">My Portfolio</a>
-            <a href="#experience" class="nav-link text-neutral-700 hover:text-primary transition-colors">Experience</a>
-            <a href="#contact" class="nav-link text-neutral-700 hover:text-primary transition-colors">Contact</a>
+            <a
+              href="#home"
+              class="nav-link text-neutral-700 hover:text-primary transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-neutral-700 hover:text-primary transition-colors"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="nav-link text-neutral-700 hover:text-primary transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#portfolio-main"
+              class="nav-link text-neutral-700 hover:text-primary transition-colors"
+              >My Portfolio</a
+            >
+            <a
+              href="#experience"
+              class="nav-link text-neutral-700 hover:text-primary transition-colors"
+              >Experience</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-neutral-700 hover:text-primary transition-colors"
+              >Contact</a
+            >
           </div>
           <div class="flex items-center space-x-4">
-            <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-neutral-100 transition-colors">
+            <button
+              id="darkModeToggle"
+              class="p-2 rounded-lg hover:bg-neutral-100 transition-colors"
+            >
               <i class="fas fa-moon text-neutral-700"></i>
             </button>
             <button id="mobileMenuToggle" class="md:hidden p-2">
@@ -578,48 +664,105 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-          <a href="#home" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Home</a>
-          <a href="#about" class="block py-2 text-neutral-700 hover:text-primary transition-colors">About</a>
-          <a href="#skills" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Skills</a>
-          <a href="#portfolio-main" class="block py-2 text-neutral-700 hover:text-primary transition-colors">My Portfolio</a>
-          <a href="#experience" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Experience</a>
-          <a href="#contact" class="block py-2 text-neutral-700 hover:text-primary transition-colors">Contact</a>
+          <a
+            href="#home"
+            class="block py-2 text-neutral-700 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block py-2 text-neutral-700 hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block py-2 text-neutral-700 hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#portfolio-main"
+            class="block py-2 text-neutral-700 hover:text-primary transition-colors"
+            >My Portfolio</a
+          >
+          <a
+            href="#experience"
+            class="block py-2 text-neutral-700 hover:text-primary transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 text-neutral-700 hover:text-primary transition-colors"
+            >Contact</a
+          >
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20 hero-gradient">
+    <section
+      id="home"
+      class="min-h-screen flex items-center pt-20 hero-gradient"
+    >
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="md:w-1/2 mb-10 md:mb-0 fade-in-up">
-            <h2 class="text-lg text-neutral-600 font-semibold mb-2">Hello, I'm</h2>
-            <h1 class="text-5xl md:text-7xl font-bold text-neutral-900 mb-4 font-display">
+            <h2 class="text-lg text-neutral-600 font-semibold mb-2">
+              Hello, I'm
+            </h2>
+            <h1
+              class="text-5xl md:text-7xl font-bold text-neutral-900 mb-4 font-display"
+            >
               <span id="nameTyping" class="name-gradient"></span>
             </h1>
             <div class="text-2xl md:text-3xl text-neutral-600 mb-6">
               <span id="roleTyping" class="typing-effect"></span>
             </div>
             <p class="text-neutral-700 mb-8 leading-relaxed">
-              I am a student who is passionate about learning web programming. I started my journey as a student at Ma'had Darul Fatah and now continue my education and pursue programming at Ma'had HSI. With a combination of religious education and technology, I hope to create beneficial digital solutions.
+              I am a student who is passionate about learning web programming. I
+              started my journey as a student at Ma'had Darul Fatah and now
+              continue my education and pursue programming at Ma'had HSI. With a
+              combination of religious education and technology, I hope to
+              create beneficial digital solutions.
             </p>
             <div class="flex flex-wrap gap-4">
-              <a href="#contact" class="px-8 py-3 btn-primary text-white rounded-full"> Contact Me </a>
-              <a href="#portfolio-main" class="px-8 py-3 btn-secondary rounded-full"> View Portfolio </a>
+              <a
+                href="#contact"
+                class="px-8 py-3 btn-primary text-white rounded-full"
+              >
+                Contact Me
+              </a>
+              <a
+                href="#portfolio-main"
+                class="px-8 py-3 btn-secondary rounded-full"
+              >
+                View Portfolio
+              </a>
             </div>
             <div class="flex space-x-4 mt-8">
-              <a href="https://github.com/fazinaljamal" class="text-neutral-600 hover:text-neutral-900 transition-colors">
+              <a
+                href="https://github.com/fazinaljamal"
+                class="text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
                 <i class="fab fa-github text-2xl"></i>
               </a>
-              <a href="https://www.instagram.com/___fzin/" class="text-neutral-600 hover:text-neutral-900 transition-colors">
+              <a
+                href="https://www.instagram.com/___fzin/"
+                class="text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
               </a>
               <i class="fab fa-instagram text-2xl"></i>
             </div>
           </div>
           <div class="md:w-1/2 flex justify-center">
             <div class="relative">
-              <div class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-primary/20 to-primary-light/20 absolute -top-10 -right-10 float-animation"></div>
-              <img src="assets/profile.jpg" alt="Profile" class="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-4 border-white/20" />
+              <div
+                class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-primary/20 to-primary-light/20 absolute -top-10 -right-10 float-animation"
+              ></div>
+              <img
+                src="assets/profile.jpg"
+                alt="Profile"
+                class="relative z-10 w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-4 border-white/20"
+              />
             </div>
           </div>
         </div>
@@ -629,14 +772,15 @@
     <!-- About Section -->
     <section id="about" class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">
-          About <span class="gradient-text">Me</span>
+        <h2
+          class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-8 section-title">
+          About <span class="text-blue-600">Me</span>
         </h2>
 
         <div class="grid md:grid-cols-[320px_1fr] gap-8 items-start">
           <!-- FOTO -->
           <div class="fade-in-up flex justify-center">
-            <img 
+            <img
               src="assets/profil.jpg"
               alt="About"
               class="rounded-xl shadow-xl w-80 h-96 object-cover"
@@ -650,7 +794,12 @@
             </h3>
 
             <p class="text-neutral-600 leading-relaxed mb-6">
-              I am a student who has completed memorization of 30 juz at Ma'had Darul Fatah Pangkal Pinang, Bangka Belitung. Currently, I am continuing my educational journey at Ma'had HSI while deepening my knowledge of web programming. I believe that the combination of religious knowledge and technology can create innovative and beneficial solutions for society.
+              I am a student who has completed memorization of 30 juz at Ma'had
+              Darul Fatah Pangkal Pinang, Bangka Belitung. Currently, I am
+              continuing my educational journey at Ma'had HSI while deepening my
+              knowledge of web programming. I believe that the combination of
+              religious knowledge and technology can create innovative and
+              beneficial solutions for society.
             </p>
 
             <div class="grid grid-cols-2 gap-4 mb-6">
@@ -694,10 +843,15 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-neutral-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">My <span class="gradient-text">Skills</span></h2>
+         <h2
+          class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-8 section-title">
+          My <span class="text-blue-600">Skills</span>
+        </h2>
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-xl font-semibold mb-6 text-neutral-900">Frontend Development</h3>
+            <h3 class="text-xl font-semibold mb-6 text-neutral-900">
+              Frontend Development
+            </h3>
             <div class="space-y-4">
               <div>
                 <div class="flex justify-between mb-2">
@@ -705,7 +859,10 @@
                   <span class="text-primary">90%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 90%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 90%"
+                  ></div>
                 </div>
               </div>
               <div>
@@ -714,7 +871,10 @@
                   <span class="text-primary">85%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 85%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 85%"
+                  ></div>
                 </div>
               </div>
               <div>
@@ -723,7 +883,10 @@
                   <span class="text-primary">80%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 80%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 80%"
+                  ></div>
                 </div>
               </div>
               <div>
@@ -732,13 +895,18 @@
                   <span class="text-primary">75%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 75%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 75%"
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h3 class="text-xl font-semibold mb-6 text-neutral-900">Backend & Tools</h3>
+            <h3 class="text-xl font-semibold mb-6 text-neutral-900">
+              Backend & Tools
+            </h3>
             <div class="space-y-4">
               <div>
                 <div class="flex justify-between mb-2">
@@ -746,7 +914,10 @@
                   <span class="text-primary">70%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 70%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 70%"
+                  ></div>
                 </div>
               </div>
               <div>
@@ -755,7 +926,10 @@
                   <span class="text-primary">65%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 65%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 65%"
+                  ></div>
                 </div>
               </div>
               <div>
@@ -764,7 +938,10 @@
                   <span class="text-primary">80%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 80%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 80%"
+                  ></div>
                 </div>
               </div>
               <div>
@@ -773,7 +950,10 @@
                   <span class="text-primary">60%</span>
                 </div>
                 <div class="w-full bg-neutral-200 rounded-full h-3">
-                  <div class="skill-bar accent-gradient h-3 rounded-full" style="width: 60%"></div>
+                  <div
+                    class="skill-bar accent-gradient h-3 rounded-full"
+                    style="width: 60%"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -803,61 +983,110 @@
     <!-- Main Portfolio Section (Hub) -->
     <section id="portfolio-main" class="py-20 bg-white">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">My <span class="gradient-text">Portfolio</span></h2>
+         <h2
+          class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-8 section-title">
+          My <span class="text-blue-600">Portfolio</span>
+        </h2>
         <div class="max-w-4xl mx-auto mb-16">
           <div class="bg-white rounded-xl shadow-xl p-8">
-            <h3 class="text-2xl font-semibold mb-6 text-neutral-900">Explore My Work</h3>
+            <h3 class="text-2xl font-semibold mb-6 text-neutral-900">
+              Explore My Work
+            </h3>
             <p class="text-neutral-600 mb-8 leading-relaxed">
-              Throughout my journey as a student and web developer, I have had the opportunity to work on various projects that combine religious knowledge and technology. From website development to tasmi' and memorization documentation, each work reflects my dedication to continuously learn and grow.
+              Throughout my journey as a student and web developer, I have had
+              the opportunity to work on various projects that combine religious
+              knowledge and technology. From website development to tasmi' and
+              memorization documentation, each work reflects my dedication to
+              continuously learn and grow.
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <a href="project/project-1.html" class="feature-card p-6 text-center card-hover">
+              <a
+                href="project/project-1.html"
+                class="feature-card p-6 text-center card-hover"
+              >
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-code text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Web Projects</h3>
-                <p class="text-neutral-600">Websites and applications I have developed</p>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">
+                  Web Projects
+                </h3>
+                <p class="text-neutral-600">
+                  Websites and applications I have developed
+                </p>
               </a>
 
-              <a href="project/project-2.html" class="feature-card p-6 text-center card-hover">
+              <a
+                href="project/project-2.html"
+                class="feature-card p-6 text-center card-hover"
+              >
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-quran text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Tasmi' Al-Quran</h3>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">
+                  Tasmi' Al-Quran
+                </h3>
                 <p class="text-neutral-600">Video documentation</p>
               </a>
 
-              <a href="project/project-3.html" class="feature-card p-6 text-center card-hover">
+              <a
+                href="project/project-3.html"
+                class="feature-card p-6 text-center card-hover"
+              >
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-open text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Tahfidz Journey</h3>
-                <p class="text-neutral-600">Documentation of my journey as a hafidz</p>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">
+                  Tahfidz Journey
+                </h3>
+                <p class="text-neutral-600">
+                  Documentation of my journey as a hafidz
+                </p>
               </a>
 
-              <a href="project/project-4.html" class="feature-card p-6 text-center card-hover">
+              <a
+                href="project/project-4.html"
+                class="feature-card p-6 text-center card-hover"
+              >
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-language text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Arabic Language</h3>
-                <p class="text-neutral-600">Presentations and learning Arabic</p>
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">
+                  Arabic Language
+                </h3>
+                <p class="text-neutral-600">
+                  Presentations and learning Arabic
+                </p>
               </a>
 
-              <a href="project/project-5.html" class="feature-card p-6 text-center card-hover">
+              <a
+                href="project/project-5.html"
+                class="feature-card p-6 text-center card-hover"
+              >
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-open text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Tahajji</h3>
-                <p class="text-neutral-600">Presentations and learning Tahajji</p>
-              </a>                   
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">
+                  Tahajji
+                </h3>
+                <p class="text-neutral-600">
+                  Presentations and learning Tahajji
+                </p>
+              </a>
 
-              <a href="project/project-6.html" class="feature-card p-6 text-center card-hover">
+              <a
+                href="project/project-6.html"
+                class="feature-card p-6 text-center card-hover"
+              >
                 <div class="feature-icon blue-icon mx-auto mb-4">
                   <i class="fas fa-book-open text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-neutral-900">Kitab Mulazzamah</h3>
-                <p class="text-neutral-600">Portfolio and learning of Aqidah, Fiqh, and Sirah Nabawiyyah</p>
-              </a>                   
+                <h3 class="text-xl font-semibold mb-2 text-neutral-900">
+                  Kitab Mulazzamah
+                </h3>
+                <p class="text-neutral-600">
+                  Portfolio and learning of Aqidah, Fiqh, and Sirah Nabawiyyah
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -867,21 +1096,35 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20 bg-neutral-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Learning <span class="gradient-text">Journey</span></h2>
+        <h2
+          class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-8 section-title">
+          Learning <span class="text-blue-600">Journey</span>
+        </h2>
         <div class="max-w-4xl mx-auto">
           <div class="relative">
-            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-lighter"></div>
+            <div
+              class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-lighter"
+            ></div>
             <div class="space-y-12">
               <div class="relative flex items-start">
                 <div class="timeline-dot ml-8"></div>
                 <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
-                  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                    <h3 class="text-xl font-semibold text-neutral-900">Ma'had HSI</h3>
-                    <span class="text-primary text-sm mt-1 sm:mt-0">2025 - Present</span>
+                  <div
+                    class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                  >
+                    <h3 class="text-xl font-semibold text-neutral-900">
+                      Ma'had HSI
+                    </h3>
+                    <span class="text-primary text-sm mt-1 sm:mt-0"
+                      >2025 - Present</span
+                    >
                   </div>
                   <h4 class="text-neutral-600 mb-3">Student & Web Developer</h4>
                   <ul class="text-neutral-600 space-y-1">
-                    <li>• Continuing religious education while deepening web programming</li>
+                    <li>
+                      • Continuing religious education while deepening web
+                      programming
+                    </li>
                     <li>• Focused on HTML, CSS, and Python</li>
                     <li>• Building web projects for the community</li>
                   </ul>
@@ -890,9 +1133,15 @@
               <div class="relative flex items-start">
                 <div class="timeline-dot ml-8"></div>
                 <div class="ml-12 bg-white p-6 rounded-xl shadow-lg flex-1">
-                  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                    <h3 class="text-xl font-semibold text-neutral-900">Ma'had Darul Fatah</h3>
-                    <span class="text-primary text-sm mt-1 sm:mt-0">2021 - 2024</span>
+                  <div
+                    class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2"
+                  >
+                    <h3 class="text-xl font-semibold text-neutral-900">
+                      Ma'had Darul Fatah
+                    </h3>
+                    <span class="text-primary text-sm mt-1 sm:mt-0"
+                      >2021 - 2024</span
+                    >
                   </div>
                   <h4 class="text-neutral-600 mb-3">Student & Hafidz 30 Juz</h4>
                   <ul class="text-neutral-600 space-y-1">
@@ -910,38 +1159,58 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-12 section-title font-display">Contact <span class="gradient-text">Me</span></h2>
+        <h2
+          class="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white mb-8 section-title">
+          Contact <span class="text-blue-600">Me</span>
+        </h2>
         <div class="max-w-4xl mx-auto">
           <div class="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 class="text-2xl font-semibold mb-6 text-neutral-900">Let's Collaborate!</h3>
-              <p class="text-neutral-600 mb-8">I am always open to discussions about web projects, creative ideas, or collaboration opportunities. Feel free to reach out!</p>
+              <h3 class="text-2xl font-semibold mb-6 text-neutral-900">
+                Let's Collaborate!
+              </h3>
+              <p class="text-neutral-600 mb-8">
+                I am always open to discussions about web projects, creative
+                ideas, or collaboration opportunities. Feel free to reach out!
+              </p>
               <div class="space-y-4">
                 <div class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
+                  <div
+                    class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0"
+                  >
                     <i class="fas fa-envelope text-primary"></i>
                   </div>
                   <div>
                     <p class="text-neutral-600">Email</p>
-                    <p class="font-semibold text-neutral-900">fazinhanzala@gmail.com</p>
+                    <p class="font-semibold text-neutral-900">
+                      fazinhanzala@gmail.com
+                    </p>
                   </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
+                  <div
+                    class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0"
+                  >
                     <i class="fas fa-phone text-primary"></i>
                   </div>
                   <div>
                     <p class="text-neutral-600">Phone</p>
-                    <p class="font-semibold text-neutral-900">+62 831 6104 2458</p>
+                    <p class="font-semibold text-neutral-900">
+                      +62 831 6104 2458
+                    </p>
                   </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                  <div class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0">
+                  <div
+                    class="w-12 h-12 bg-primary-lightest rounded-full flex items-center justify-center flex-shrink-0"
+                  >
                     <i class="fas fa-map-marker-alt text-primary"></i>
                   </div>
                   <div>
                     <p class="text-neutral-600">Location</p>
-                    <p class="font-semibold text-neutral-900">Bangka Belitung, Indonesia</p>
+                    <p class="font-semibold text-neutral-900">
+                      Bangka Belitung, Indonesia
+                    </p>
                   </div>
                 </div>
               </div>
@@ -949,20 +1218,54 @@
             <div>
               <form id="contactForm" class="space-y-4">
                 <div>
-                  <input type="text" id="name" placeholder="Full Name" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900" />
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900"
+                  />
                 </div>
                 <div>
-                  <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900" />
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900"
+                  />
                 </div>
                 <div>
-                  <input type="text" id="subject" placeholder="Subject" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900" />
+                  <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors text-neutral-900"
+                  />
                 </div>
                 <div>
-                  <textarea id="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none text-neutral-900"></textarea>
+                  <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                    class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none text-neutral-900"
+                  ></textarea>
                 </div>
-                <button type="submit" class="w-full py-3 btn-primary text-white rounded-lg">Send Message</button>
+                <button
+                  type="submit"
+                  class="w-full py-3 btn-primary text-white rounded-lg"
+                >
+                  Send Message
+                </button>
               </form>
-              <div id="successMessage" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">Your message has been sent! I will get back to you soon.</div>
+              <div
+                id="successMessage"
+                class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg"
+              >
+                Your message has been sent! I will get back to you soon.
+              </div>
             </div>
           </div>
         </div>
@@ -974,13 +1277,19 @@
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-4 md:mb-0">
-            <p>&copy; 2024 Fazin Hanzala. All rights reserved.</p>
+            <p>&copy; 2026 Fazin Hanzala. All rights reserved.</p>
           </div>
           <div class="flex space-x-6">
-            <a href="https://github.com/" class="hover:text-primary-light transition-colors">
+            <a
+              href="https://github.com/"
+              class="hover:text-primary-light transition-colors"
+            >
               <i class="fab fa-github text-xl"></i>
             </a>
-            <a href="https://www.instagram.com/accounts/onetap/?next=%2F" class="hover:text-primary-light transition-colors">
+            <a
+              href="https://www.instagram.com/accounts/onetap/?next=%2F"
+              class="hover:text-primary-light transition-colors"
+            >
               <i class="fab fa-instagram text-xl"></i>
             </a>
           </div>
@@ -992,8 +1301,8 @@
       // ============================================================
       // 1. NAME TYPING EFFECT
       // ============================================================
-      const nameElement = document.getElementById('nameTyping');
-      const name = 'Fazin Hanzala';
+      const nameElement = document.getElementById("nameTyping");
+      const name = "Fazin Hanzala";
       let nameIndex = 0;
       let isDeletingName = false;
 
@@ -1024,11 +1333,16 @@
       // ============================================================
       // 2. ROLE TYPING EFFECT
       // ============================================================
-      const roleTexts = ['Student', 'Web Developer', 'Hafidz 30 Juz', 'Python Enthusiast'];
+      const roleTexts = [
+        "Student",
+        "Web Developer",
+        "Hafidz 30 Juz",
+        "Python Enthusiast",
+      ];
       let roleIndex = 0;
       let charIndex = 0;
       let isDeletingRole = false;
-      const roleElement = document.getElementById('roleTyping');
+      const roleElement = document.getElementById("roleTyping");
 
       function typeRoleEffect() {
         const currentText = roleTexts[roleIndex];
@@ -1060,7 +1374,7 @@
       // ============================================================
       // 3. START ALL EFFECTS
       // ============================================================
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         typeNameEffect();
         typeRoleEffect();
       });
@@ -1068,46 +1382,46 @@
       // ============================================================
       // 4. MOBILE MENU TOGGLE
       // ============================================================
-      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
 
       if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
         });
       }
 
       // ============================================================
       // 5. DARK MODE TOGGLE
       // ============================================================
-      const darkModeToggle = document.getElementById('darkModeToggle');
+      const darkModeToggle = document.getElementById("darkModeToggle");
       const body = document.body;
 
       // Cek tema yang tersimpan
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
-        const icon = darkModeToggle.querySelector('i');
+      const currentTheme = localStorage.getItem("theme") || "light";
+      if (currentTheme === "dark") {
+        body.classList.add("dark-mode");
+        const icon = darkModeToggle.querySelector("i");
         if (icon) {
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
         }
       }
 
       if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-          body.classList.toggle('dark-mode');
-          const icon = darkModeToggle.querySelector('i');
+        darkModeToggle.addEventListener("click", () => {
+          body.classList.toggle("dark-mode");
+          const icon = darkModeToggle.querySelector("i");
           if (icon) {
-            icon.classList.toggle('fa-moon');
-            icon.classList.toggle('fa-sun');
+            icon.classList.toggle("fa-moon");
+            icon.classList.toggle("fa-sun");
           }
 
           // Simpan preferensi tema
-          if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
+          if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
           } else {
-            localStorage.setItem('theme', 'light');
+            localStorage.setItem("theme", "light");
           }
         });
       }
@@ -1115,13 +1429,13 @@
       // ============================================================
       // 6. NAVBAR SCROLL EFFECT
       // ============================================================
-      const navbar = document.getElementById('navbar');
+      const navbar = document.getElementById("navbar");
 
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
-          navbar.classList.add('shadow-lg');
+          navbar.classList.add("shadow-lg");
         } else {
-          navbar.classList.remove('shadow-lg');
+          navbar.classList.remove("shadow-lg");
         }
       });
 
@@ -1129,21 +1443,21 @@
       // 7. SMOOTH SCROLL & CLOSE MOBILE MENU
       // ============================================================
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          const href = this.getAttribute('href');
-          if (!href || href === '#') return;
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (!href || href === "#") return;
 
           const target = document.querySelector(href);
           if (target) {
             e.preventDefault();
             target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
+              behavior: "smooth",
+              block: "start",
             });
 
             // Tutup mobile menu jika terbuka
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-              mobileMenu.classList.add('hidden');
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
             }
           }
         });
@@ -1152,8 +1466,8 @@
       // ============================================================
       // 8. ACTIVE NAVIGATION HIGHLIGHT
       // ============================================================
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
 
       function highlightActiveSection() {
         const scrollY = window.pageYOffset;
@@ -1161,44 +1475,44 @@
         sections.forEach((section) => {
           const sectionHeight = section.offsetHeight;
           const sectionTop = section.offsetTop - 100;
-          const sectionId = section.getAttribute('id');
+          const sectionId = section.getAttribute("id");
 
           if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinks.forEach((link) => {
-              link.classList.remove('active-nav');
-              const linkHref = link.getAttribute('href');
+              link.classList.remove("active-nav");
+              const linkHref = link.getAttribute("href");
               if (linkHref === `#${sectionId}`) {
-                link.classList.add('active-nav');
+                link.classList.add("active-nav");
               }
             });
           }
         });
       }
 
-      window.addEventListener('scroll', highlightActiveSection);
+      window.addEventListener("scroll", highlightActiveSection);
 
       // ============================================================
       // 9. CONTACT FORM
       // ============================================================
-      const contactForm = document.getElementById('contactForm');
-      const successMessage = document.getElementById('successMessage');
+      const contactForm = document.getElementById("contactForm");
+      const successMessage = document.getElementById("successMessage");
 
       if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener("submit", (e) => {
           e.preventDefault();
 
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const subject = document.getElementById('subject').value;
-          const message = document.getElementById('message').value;
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
 
-          console.log('Form submitted:', { name, email, subject, message });
+          console.log("Form submitted:", { name, email, subject, message });
 
-          successMessage.classList.remove('hidden');
+          successMessage.classList.remove("hidden");
           contactForm.reset();
 
           setTimeout(() => {
-            successMessage.classList.add('hidden');
+            successMessage.classList.add("hidden");
           }, 5000);
         });
       }
@@ -1208,22 +1522,22 @@
       // ============================================================
       const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: "0px 0px -50px 0px",
       };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
           }
         });
       }, observerOptions);
 
-      document.querySelectorAll('section').forEach((section) => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
         observer.observe(section);
       });
 
@@ -1231,7 +1545,7 @@
       // 11. FIX: Perbaikan untuk typing effect di role
       // ============================================================
       if (!roleElement) {
-        console.warn('Role typing element not found');
+        console.warn("Role typing element not found");
       }
     </script>
   </body>
